@@ -10,6 +10,14 @@
 * __Chapter 1__ - Introduction to Computers, Programs, and Java
 </td>
 	<td markdown="block">
-* quiz and readings to be posted
+
+Assignment Due Feb 2nd
+
 * [Assignment #1](assignments/hw01.html)
+
+Online Quizzes Due Feb 4th
+
+* Read Chapters 1 through 5 in {{ site.book }}
+* Quiz #1 and Quiz #2 on NYU Classes (under Tests and Quizzes) 
+
 </td>

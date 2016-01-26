@@ -18,7 +18,6 @@ nav-state: assignments
 * [Assignment #9](assignments/hw09.html)
 * [Assignment #10](assignments/hw10.html)
 * [Assignment #11](assignments/hw11.html)
-{% endcomment %}
 
 
 ## Solutions
@@ -77,3 +76,4 @@ Homework #9
 Homework #10
 
 * hw10 - [MyAnimation.java](resources/code/hw10-solutions/MyAnimation.java)
+{% endcomment %}
