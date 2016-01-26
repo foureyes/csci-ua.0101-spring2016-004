@@ -7,7 +7,7 @@ title: "Assignment #1"
 
 ## Part 1 - Readings
 
-Read __Chapter #1__, Introduction to Computers, Programs, and Java in your book, _{{site.book}}_
+This homework is based on __Chapter #1__, Introduction to Computers, Programs, and Java in your book, _{{site.book}}_
 
 ## Part 2 - Install Java and Eclipse
 
@@ -27,12 +27,7 @@ Download and run the appropriate installers for your Operating System:
 	* go into the uncompressed folder (it should be named <code>eclipse</code>)
 	* launch Eclipse
 
-## Parts 3 and 4
-
-(TO BE POSTED)
-
-{% comment %}
-## (20 points) Part 3 - Display Five Messages
+## (10 points) Part 3 - Display Five Messages
 
 * see section 1.12 in your book or [watch the video](http://www.cs.armstrong.edu/liang/intro9e/VideoNote/Eclipse/EclipseTutorial.htm) from the previous edition's supplemental material (may be slightly out-of-date, and a bit hokey!) for help with Eclipse
 * create a new Java project in Eclipse 
@@ -53,8 +48,9 @@ Welcome to Java
 
 * use consistent indentation, spacing and bracing style throughout your program
 * add a comment that explains what the program does
+* add a multi-line comment with your name and the course name at the top of your file
 
-## (30 points) Part 4 - Population Projection 
+## (20 points) Part 4 - Population Projection 
 
 * create a new Java project in Eclipse
 * create a new class file called <code>PopulationProjection</code>
@@ -71,7 +67,7 @@ Write a program to display the population for each of the next five years. Assum
 
 * use consistent indentation, spacing and bracing style throughout your program
 * add a comment that explains what the program does
-{% endcomment %}
+* add a multi-line comment with your name and the course name at the top of your file
 
 # Submission Process
 
@@ -83,10 +79,8 @@ Write a program to display the population for each of the next five years. Assum
 
 # Grading Criteria
 
-(TO BE POSTED)
-{% comment %}
 * no credit: file does not compile
-* -5 points: files and classes are not named according to instructions
-* -5 points: inconsistent style using curly braces, inconsistent use of spaces and indentation, lack of comments
+* -2 points: files and classes are not named according to instructions
+* -2 points: inconsistent style using curly braces, inconsistent use of spaces and indentation
+* -2 points: lack of comments
 * -50% point value (approximately) of file: actual output of program does not match expected output
-{% endcomment %}
