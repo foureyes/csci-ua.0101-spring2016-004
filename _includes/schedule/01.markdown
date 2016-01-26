@@ -10,7 +10,6 @@
 * __Chapter 1__ - Introduction to Computers, Programs, and Java
 </td>
 	<td markdown="block">
-* Read Chapter 1
-* Install Java and Eclipse 
-* Submit [Assignment #1](assignments/hw01.html)
+* quiz and readings to be posted
+* [Assignment #1](assignments/hw01.html)
 </td>

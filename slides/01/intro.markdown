@@ -26,9 +26,8 @@ __Joe Versoza__
 
 * Clinical Assistant Professor in the Computer Science Department
 * email: jversoza at cs dot nyu dot edu
-* you can find me in WWH 423 during my office hours: 
-	* Tuesdays 11:00AM to 12:00PM and 12:45pm to 1:45pm
-	* Wednesdays 5:00PM to 6:00PM
+* you can find me in {{ site.office_hours_room }} during my office hours: 
+	* {{ site.office_hours }}
 
 </section>
 <section markdown="block">
@@ -128,7 +127,7 @@ __It's a bit more difficult than 0002!__
 * {:.fragment} homework grading will take into account __program design__ and __efficiency__
 * {:.fragment} if you're not comfortable with topics from 0002, or if your grade were on the lower side (C, B-), you may consider working with me during office hours / __going to tutors from the start__
 
-<span class="fragment">(Lastly, this is the first time teaching I'm teaching this particular course so it might be a little rough around the edges!)</span>
+<span class="fragment">(Lastly, this is only the second time that I'm teaching this particular course so it might not be quite as _polished_ as my 0002!)</span>
 </section>
 
 <section markdown="block">

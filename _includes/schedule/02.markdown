@@ -8,9 +8,13 @@
 * [Input and Output](slides/02/input-output.html)
 </td>
 	<td markdown="block">
+{% comment %}
 * __Chapter 2__ - Elementary Programming
+{% endcomment %}
 </td>
 	<td markdown="block">
+{% comment %}
 * Read Chapters 2 and 3
 * Submit [Assignment #02](assignments/hw02.html)
+{% endcomment %}
 </td>

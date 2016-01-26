@@ -41,10 +41,7 @@ TODO:
 * ADD: old class 24, string formatting
 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/02.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 

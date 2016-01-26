@@ -1,6 +1,6 @@
 ---
 layout: slides
-title: About Class \#2
+title: About Class \#3
 ---
 
 <section markdown="block" class="intro-slide">
@@ -14,126 +14,46 @@ title: About Class \#2
 <section markdown="block">
 ## Today's Topics
 
-* a short review + filling in some gaps
-* a quick exercise
-* on coercion, casting, checking for NaN and undefined, 
-* functions
-* perhaps another quick exercise
-* maybe objects
-* maybe a git crash course to prep for next week
+* first Java program revisited
+* compiling and running Java programs, using Eclipse
+* data ... classes, objects, and types
+* some built-in classes 
+* primitive numeric types operations
+* declaring variables, constants
+* style
+* import
+* input and output
+
+</section>
+
+{% comment %}
+<section markdown="block">
+## Homework #1
+
+__Oops!__
+
+Everything (of course, by _everything_, I mean the assignment itself as well as NYU Classes) says that the assignment is due today, February 3rd at 11PM.
+
+* however, my email mentioned the 5th as the due date
+* I expect assignments to be turned in this evening
+* if you were relying on the 5th as the actual due date, send me a note; I'll give extensions individually
 
 </section>
 
 <section markdown="block">
-## Where This Fits in With Everything Else
+## Homework #1 Details
 
-* check out the [schedule](../../schedule.html)
-* we're doing about 3 weeks of JavaScript
-* for the first week, we're covering the basics (a bit of a drag, I know)
-* next week, we're covering the _fun stuff_ - like functional programming and object oriented programming
-
+[Let's take a look at the first homework](../../assignments/hw01.html)
 </section>
 
 <section markdown="block">
-## Homework
+## Homework in General
 
-* nothing to turn in this week; I just expected you to try installing node
-* ...and maybe do some reading
-* __you did get my email, right? all 256 of them?__ (sorry about that)
-* first assignment will be posted on Tuesday next week
-</section>
-
-<section markdown="block">
-## Miscellaneous
-
-* I'll let you know the results from the survey next Tuesday as well
-* __has everyone been able to get to the class slides?__ &rarr;
-* __what about NYU classes?__ &rarr;
-* __have you tried reading {{ site.book_js }}? Good? Not so good?__ &rarr;
-</section>
-
-<section markdown="block">
-## Concerned About Not Knowing HTML/CSS?
-
-Here are some resources:
-
-* [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/) by Shay Howe
-* [Make a Website](http://www.codecademy.com/skills/make-a-website) by Codecademy
-
-<br>
-Both are free and online... and relatively compact!
-
-(though... I know from surveys that some of you are __actually literally professionals__ with regard to this topic!)
-</section>
-
-<section markdown="block">
-## Onward!
-
-### Again, the topics we'll check out today are:
-
-* a short review + filling in some gaps
-* a quick exercise
-* on coercion, casting, checking for NaN and undefined, 
-* functions
-* perhaps another quick exercise
-* maybe objects
-* maybe a git crash course to prep for next week
+* will be posted on Tuesdays...  (that means I'll be posting homework #2 tonight!)
+* will be due on Tuesdays
+* grading criteria will be on assignment
+* please pay attention to the instructions
+* maintain a consistent style
 
 </section>
-
-<section markdown="block">
-## Where This Fits in With Everything Else
-
-* check out the [schedule](../../schedule.html)
-* we're doing about 3 weeks of JavaScript
-* for the first week, we're covering the basics (a bit of a drag, I know)
-* next week, we're covering the _fun stuff_ - like functional programming and object oriented programming
-
-</section>
-
-<section markdown="block">
-## Homework
-
-* nothing to turn in this week; I just expected you to try installing node
-* ...and maybe do some reading
-* __you did get my email, right? all 256 of them?__ (sorry about that)
-* first assignment will be posted on Tuesday next week
-</section>
-
-<section markdown="block">
-## Miscellaneous
-
-* I'll let you know the results from the survey next Tuesday as well
-* __has everyone been able to get to the class slides?__ &rarr;
-* __what about NYU classes?__ &rarr;
-* __have you tried reading {{ site.book_js }}? Good? Not so good?__ &rarr;
-</section>
-
-<section markdown="block">
-## Concerned About Not Knowing HTML/CSS?
-
-Here are some resources:
-
-* [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/) by Shay Howe
-* [Make a Website](http://www.codecademy.com/skills/make-a-website) by Codecademy
-
-<br>
-Both are free and online... and relatively compact!
-
-(though... I know from surveys that some of you are __actually literally professionals__ with regard to this topic!)
-</section>
-
-<section markdown="block">
-## Onward!
-
-### Again, the topics we'll check out today are:
-
-* a short review + filling in some gaps
-* a quick exercise
-* on coercion, casting, checking for NaN and undefined, 
-* functions
-* perhaps another quick exercise
-* maybe objects
-
-</section>
-
+{% endcomment %}
