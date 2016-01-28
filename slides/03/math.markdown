@@ -61,4 +61,3 @@ double roll2 = (int) (Math.random() * 6 + 1);
 System.out.println(roll1 + roll2);
 </code></pre>
 </section>
-

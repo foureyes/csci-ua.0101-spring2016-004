@@ -56,10 +56,7 @@ TODO:
 * Operator Precedence
 {% comment %} TODO: old class 4 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/03.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
@@ -71,10 +68,7 @@ TODO:
 * Strings
 {% comment %} TODO: old class 5 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/04.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 

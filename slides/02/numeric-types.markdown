@@ -132,7 +132,7 @@ Besides our usual base-10 whole numbers, integer literals can be written as bina
 
 * prefix with __0b__ for binary (base 2)
 * prefix with __0__ for octal (base 8)
-* prefix with __0b__ for hexadecimal (base 16)
+* prefix with __0x__ for hexadecimal (base 16)
 
 __By the way, how do these numbering systems work__ &rarr;
 

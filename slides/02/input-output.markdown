@@ -33,11 +33,11 @@ ComputeChange.java
 Enter an amount, for example, 11.56
 > 7.82
 Your amount 7.82 consists of:
-	7 dollars
-	2 quarters
-	3 dimes
-	0 nickels
-	2 pennies
+7 dollars
+2 quarters
+3 dimes
+0 nickels
+2 pennies
 </code></pre>
 
 </section>
@@ -73,24 +73,25 @@ public class ComputeChange {
 ## Running Some Calculations
 
 __Now... let's use a combination of division and modulo to calculate change.__ &rarr;
+
 <pre class="fragment"><code data-trim contenteditable>
-		remaining = (int) (amount * 100);
-				
-		dollars = remaining / 100;
-		remaining = remaining % DOLLAR;
+remaining = (int) (amount * 100);
 		
-		quarters = remaining / QUARTER;
-		remaining = remaining % QUARTER;
-		
-		dimes = remaining / DIME;
-		remaining = remaining % DIME;
-		
-		nickels = remaining / NICKEL;
-		remaining = remaining % NICKEL;
-		
-		pennies = remaining;
-		
-		// print everything out here....
+dollars = remaining / 100;
+remaining = remaining % DOLLAR;
+
+quarters = remaining / QUARTER;
+remaining = remaining % QUARTER;
+
+dimes = remaining / DIME;
+remaining = remaining % DIME;
+
+nickels = remaining / NICKEL;
+remaining = remaining % NICKEL;
+
+pennies = remaining;
+
+// print everything out here....
 </code></pre>
 
 </section>
@@ -101,11 +102,11 @@ __Now... let's use a combination of division and modulo to calculate change.__ &
 Simply...
 
 <pre><code data-trim contenteditable>
-		System.out.println(dollars + " Dollars");
-		System.out.println(quarters + " Quarters");
-		System.out.println(dimes + " Dimes");
-		System.out.println(nickels + " Nickels");
-		System.out.println(pennies + " Pennies");
+System.out.println(dollars + " Dollars");
+System.out.println(quarters + " Quarters");
+System.out.println(dimes + " Dimes");
+System.out.println(nickels + " Nickels");
+System.out.println(pennies + " Pennies");
 </code></pre>
 
 </section>

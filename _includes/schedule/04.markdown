@@ -1,20 +1,31 @@
 	<td markdown="block">
-* [About Class #4](slides/04/meta.html)
-* [Selection](slides/04/selection.html)
-* [Math Class](slides/04/math.html)
 
+* [Back to Common Errors](slides/04/errors.html)
+* [Miscellaneous (Project Setup, Boolean Coercion, Scanner)](slides/04/misc.html)
+* [Characters](slides/04/characters.html)
+* [Strings](slides/04/strings.html)
 {% comment %}
-* [Common Errors](slides/04/common-errors.html)
-* [Variables, Constants](slides/04/variables-constants.html)
-* [Input and Output](slides/04/input-output.html)
-* [Software Development Process](slides/04/process.html)
+
+* [Formatting Output](slides/04/printf.html) 
+* [Math Module Continued, Random](slides/04/math.html)
+* Strings
+	* charat
+* chars
+	* converting to and from
+	* Character.numericValue
+	* reads in 1 token at a time...
+* debugging
+* using processing?
 {% endcomment %}
 </td>
 	<td markdown="block">
-* __Chapter 3__ - Selections
+* __Chapter 4__ - Mathematical Functions, Characters and Strings
 </td>
 	<td markdown="block">
-<!--
-* [](assignments/.html)
--->
+{% comment %}
+* Read Chapters 4 and 5
+* Read Appendix F on Number Systems
+
+* Submit [Assignment #03](assignments/hw03.html)
+{% endcomment %}
 </td>

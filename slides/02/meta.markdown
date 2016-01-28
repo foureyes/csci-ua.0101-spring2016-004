@@ -1,6 +1,6 @@
 ---
 layout: slides
-title: About Class \#3
+title: "About Class #2"
 ---
 
 <section markdown="block" class="intro-slide">
@@ -14,11 +14,6 @@ title: About Class \#3
 <section markdown="block">
 ## Today's Topics
 
-* first Java program revisited
-* compiling and running Java programs, using Eclipse
-* data ... classes, objects, and types
-* some built-in classes 
-* primitive numeric types operations
 * declaring variables, constants
 * style
 * import
@@ -26,17 +21,19 @@ title: About Class \#3
 
 </section>
 
-{% comment %}
 <section markdown="block">
-## Homework #1
+## Homework #1 and Quizzes #1 and #2
 
-__Oops!__
+__Homework #1__
 
-Everything (of course, by _everything_, I mean the assignment itself as well as NYU Classes) says that the assignment is due today, February 3rd at 11PM.
+* due Feb 2nd
+* just submit the .java files
 
-* however, my email mentioned the 5th as the due date
-* I expect assignments to be turned in this evening
-* if you were relying on the 5th as the actual due date, send me a note; I'll give extensions individually
+__Online Quizzes #1 and #2__
+
+* due Feb 4th
+* read Chapters 1 through 5 in Introduction to Java Programming
+* Quiz #1 and Quiz #2 on NYU Classes (under Tests and Quizzes)
 
 </section>
 
@@ -49,11 +46,10 @@ Everything (of course, by _everything_, I mean the assignment itself as well as 
 <section markdown="block">
 ## Homework in General
 
-* will be posted on Tuesdays...  (that means I'll be posting homework #2 tonight!)
+* will be posted on Tuesdays... 
 * will be due on Tuesdays
 * grading criteria will be on assignment
 * please pay attention to the instructions
 * maintain a consistent style
 
 </section>
-{% endcomment %}
