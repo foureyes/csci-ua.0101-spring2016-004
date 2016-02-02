@@ -247,6 +247,8 @@ One of these is clearly better than the others...
 * use switch with 52 cases
 * generate a random face, then generate  a random suit
 
+{% comment %}
 __[Do this for homework #3!](../../assignments/hw03.html)__
+{% endcomment %}
 
 </section>

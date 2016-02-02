@@ -19,15 +19,21 @@ You have questions. Maybe I have answers.
 * Can a __non-boolean value__ be used in an __if statement condition__; is it automatically coerced to a boolean?
 * Why does Eclipse warn you about __closing your Scanner object__?
 * Can the __Scanner object__ handle __more than one input in a line__?
+* How to get rid of scientific notation?
+* Ok to use for loops?
+* That's a lot of code!?
+
+{% comment %}
 * The lottery homework has ambiguous wording... what does __all digits match__ mean?
+{% endcomment %}
 </section>
 
 <section markdown="block">
-## Multiple Homework Parts in Project
+## Multiple HW Files in Project
 
 If you've been doing your homework (which you have, _right_?), the left panel in Eclipse, the project explorer, may be getting a bit crowded.
 
-Someone asked __"can we store all of our .java files in the same project?__ &rarr;
+Someone asked __"can we store all .java files in the same project?__ &rarr;
 
 * {:.fragment} __absolutely__ ... all I end up seeing for these first assignments are the <code>.java</code> files anyway... __let's see how it works__ &rarr;
 * {:.fragment} I'll amend future homework instructions to allow this... as this strategy is probably super useful for organizing homework with multiple parts
@@ -120,6 +126,32 @@ Either way works! Though the homework from the book looks like you input 2 value
 </section>
 
 <section markdown="block">
+## Ugh, That Scientific Notation Looks Gross
+
+__Can't I just have a _regular_ double?__ &rarr;
+
+<pre><code data-trim contenteditable>
+double foo = 3.0 * 123456789;
+System.out.println(foo);
+</code></pre>
+
+Prints out...
+
+<pre><code data-trim contenteditable>
+3.70370367E8
+</code></pre>
+
+Whaaaaat? There are a few ways to fix this (which we'll cover more in-depth later this semester). One way is to use <code>printf</code>:
+
+<pre><code data-trim contenteditable>
+// remember string formatting in python?
+// kind of looks similar, right?
+System.out.printf("the result is %.2f", foo);
+</code></pre>
+
+</section>
+{% comment %}
+<section markdown="block">
 ## Lottery Homework
 
 * if your random lottery number yields repeated digits, such as <code>277</code>...
@@ -127,5 +159,17 @@ Either way works! Though the homework from the book looks like you input 2 value
 * (however, feel free to implement matching of each individual digit)
 
 </section>
+{% endcomment %}
 
+<section markdown="block">
+## For Loops / Lots of Code
+
+Ok... last two questions:
+
+* __can for loops be used in the homework__?
+* {:.fragment} yes - readings go through chapter 5, so you can use everything you've learned so far
+* {:.fragment} __is it just me, or is that a lot of code__ &rarr;
+* {:.fragment} don't worry - it's not just you; Java's kind of verbose (remember, hello world took like 3 lines a tons of typing!), but in a _lovable_ way, right?
+
+</section>
 

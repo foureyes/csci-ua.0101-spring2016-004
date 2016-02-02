@@ -56,7 +56,7 @@ A __char__ represents a single character.
 // notice that we're using single quotes!
 
 char myLetter = 'J';
-char myNumber = '423';
+char myNumber = '4';
 </code></pre>
 </section>
 
