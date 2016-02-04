@@ -132,7 +132,7 @@ Hey... that wasn't a single letter
 A potential solution ...
 
 <pre><code data-trim contenteditable>
-canner input = new Scanner(System.in);
+Scanner input = new Scanner(System.in);
 System.out.print("Give me a character, I'll give you the next one\n> ");
 String userInput = input.next();
 if (userInput.length() == 1) {

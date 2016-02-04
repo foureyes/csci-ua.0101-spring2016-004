@@ -93,10 +93,7 @@ TODO:
 * Floating Point Arithmetic
 {% comment %} TODO: old class 7 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/06.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 

@@ -153,7 +153,7 @@ Integer.toString(5)
 <section markdown="block">
 ## Password
 
-__Write a program that asks the user to create and confirm a passowrd__ &rarr;
+__Write a program that asks the user to create and confirm a password &rarr;
 
 * the password must begin and start with the same letter (terrible requirements)
 * if it doesn't, the program ends immediately - <code>Sorry, your password did not meet the requirements!</code>
@@ -247,8 +247,6 @@ One of these is clearly better than the others...
 * use switch with 52 cases
 * generate a random face, then generate  a random suit
 
-{% comment %}
-__[Do this for homework #3!](../../assignments/hw03.html)__
-{% endcomment %}
+__[Do this for homework #2!](../../assignments/hw02.html)__
 
 </section>
