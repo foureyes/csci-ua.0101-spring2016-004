@@ -16,7 +16,7 @@
 * __Chapter 3__ - Selections
 </td>
 	<td markdown="block">
-<!--
-* [](assignments/.html)
--->
+Assignment Due Feb 9th
+
+* [Assignment #2](assignments/hw02.html)
 </td>

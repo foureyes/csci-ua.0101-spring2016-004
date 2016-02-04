@@ -82,10 +82,7 @@ TODO:
 * Break and Continue
 {% comment %} TODO: old class 6 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/05.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
