@@ -106,7 +106,7 @@ Create a program that generates a single random card from this deck.
 
 Generate a random card from a regular 52 card deck:
 
-* the face can be A, 2 - 9, J, Q, K
+* the face can be A, 2 - 10, J, Q, K
 * (4 points) the suit can be hearts, diamonds, clubs and spades
 * (4 points) use the following unicode symbols for the suit
 	* <code>\u2660</code> - ♠
