@@ -35,7 +35,7 @@ __Of course, the one that we probably use the most is the one that we use to gen
 * {:.fragment} <code>(int) (Math.random() * 10 + 1)</code>
 * {:.fragment} or... <code>1 + (int) (Math.random() * 10)</code>
 * {:.fragment} __in general__, to generate a random number from __a__ to __b__, inclusive, you can use this formula:  <code>a + (int) (Math.random() * b)</code>
-* {:.fragment} generates a random number from __a__ to __b__, __without including b__: <code>b + (int)(Math.random() * (b - a))</code>
+* {:.fragment} generates a random number from __a__ to __b__, __without including b__: <code>a + (int)(Math.random() * (b - a))</code>
 </section>
 
 <section markdown="block">
@@ -60,7 +60,7 @@ __Finally, trig functions (we haven't used these quite yet).__ &rarr;
 * {:.fragment}<code>cos(radians)</code> - Returns the trigonometric cosine of an angle in radians.
 * {:.fragment}<code>tan(radians)</code> - Returns the trigonometric tangent of an angle in radians.
 * {:.fragment}<code>toRadians(degree)</code> - Returns the angle in radians for the angle in degree.
-* {:.fragment}<code>toDegree(radians)</code> - Returns the angle in degrees for the angle in radians.
+* {:.fragment}<code>toDegrees(radians)</code> - Returns the angle in degrees for the angle in radians.
 * {:.fragment}<code>asin(a)</code> - Returns the angle in radians for the inverse of sine.
 * {:.fragment}<code>acos(a)</code> - Returns the angle in radians for the inverse of cosine.
 * {:.fragment}<code>atan(a)</code> - Returns the angle in radians for the inverse of tangent.
@@ -150,11 +150,15 @@ From {{site.book}} - __"Calculations involving floating-point numbers are approx
 
 * __what is 1/3 in decimal__ &rarr;
 * {:.fragment} 0.3 repeating  (can't quite be expressed completely... since the three repeats)
-* {:.fragment} there are similar numbers for binary
+* {:.fragment} there are similar numbers for binary ... so there are occasionally rounding errors
+* {:.fragment} [More info here](http://floating-point-gui.de/formats/binary/)
+
+
+{% comment %}
 * {:.fragment} __binary can only represent numbers as a finite fraction if the denominator is a power of 2__
 	* {:.fragment} 0.5 ... ok!
 	* {:.fragment} 0.3 ... uhhhh?
-	* {:.fragment} [More info here](http://floating-point-gui.de/formats/binary/)
+{% endcomment %}
 
 </section>
 
@@ -190,7 +194,7 @@ float n = 1.2f;
 <section markdown="block">
 ## Adding Floating Point Numbers With a Loop
 
-__This program adds the numbers from 0.01 to 1 by hundreds.__ __What do you think the result should be... and how does it compare to the actual output?__&rarr;
+__This program adds the numbers from 0.01 to 1 by 0.01.__ __What do you think the result should be... and how does it compare to the actual output?__&rarr;
 
 (Notice we're explicitly using floats)
 
