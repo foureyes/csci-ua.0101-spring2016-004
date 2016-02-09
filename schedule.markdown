@@ -106,9 +106,7 @@ TODO:
 * Stack Frames
 {% comment %} TODO: old class 8 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/07.markdown %}
-{% endcomment %}
 <td></td><td></td><td></td>
  </tr>
 
