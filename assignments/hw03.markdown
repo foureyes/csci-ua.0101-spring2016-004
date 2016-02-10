@@ -280,11 +280,9 @@ Here's another description of the rules for this dice game:
 
 Requirements
 
-* you'll need a way to store multiple die rolls; we don't know <code>Array</code>s yet (the _sort of_ equivalent of lists in Python)... so you'll probably make heavy use of <code>String</code>s and <code>char</code>s... as well as methods in the <code>Character</code> class.
+* you'll need a way to store multiple die rolls; we don't know <code>Arrays</code> yet (the _sort of_ equivalent of lists in Python)... so you'll probably make heavy use of <code>Strings</code> and <code>chars</code>... as well as methods in the <code>Character</code> class.
 * in particular, there's a method not mentioned in the book called:
-    <pre><code data-trim contenteditable>
-Character.getNumericValue(ch)    
-</code></pre>
+    <pre><code data-trim contenteditable>Character.getNumericValue(ch)</code></pre>
 * you'll need it to convert characters to the <code>int</code> value that they represent (rather than the unicode code point)
 * [check out the documentation for more details - https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#getNumericValue(char)](https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#getNumericValue(char))
 
@@ -313,6 +311,7 @@ Die Roll 5 - ⚀ (1)
 * if there's only one die rolled, automatically pin that die for the user
     * add the roll do your collection of pinned dice
     * print out a message that says: <code>Automatically pin last die</code>
+* roll the remainder of the dice... and continue the same process until all dice are pinned
 * once all of the dice are pinned, print out the player's score
 
 
@@ -338,6 +337,35 @@ Die Roll 1 - ⚃ (4)
 Automatically pin last die
 Pinned: ⚀ ⚀ ⚀ ⚀ ⚃ (11114)
 Your score is 8!
+</code></pre>
+
+__(Another run, with a better score... note that 3's are counted as 0's!)__ 
+
+
+<pre><code data-trim contenteditable>Enter numbers of dice to pin... for example, to pin the die 1 and 2, enter 12):
+Die Roll 1 - ⚂ (3)
+Die Roll 2 - ⚅ (6)
+Die Roll 3 - ⚀ (1)
+Die Roll 4 - ⚃ (4)
+Die Roll 5 - ⚂ (3)
+> 15
+Pinned: ⚂ ⚂ (33)
+Enter numbers of dice to pin... for example, to pin the die 1 and 2, enter 12):
+Die Roll 1 - ⚄ (5)
+Die Roll 2 - ⚃ (4)
+Die Roll 3 - ⚃ (4)
+> 2
+Pinned: ⚂ ⚂ ⚃ (334)
+Enter numbers of dice to pin... for example, to pin the die 1 and 2, enter 12):
+Die Roll 1 - ⚂ (3)
+Die Roll 2 - ⚃ (4)
+> 1
+Pinned: ⚂ ⚂ ⚃ ⚂ (3343)
+Enter numbers of dice to pin... for example, to pin the die 1 and 2, enter 12):
+Die Roll 1 - ⚁ (2)
+Automatically pin last die
+Pinned: ⚂ ⚂ ⚃ ⚂ ⚁ (33432)
+Your score is 6!
 </code></pre>
 
 
