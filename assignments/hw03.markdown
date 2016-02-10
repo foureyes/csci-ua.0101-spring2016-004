@@ -276,7 +276,19 @@ Here's another description of the rules for this dice game:
 * (This can be within a project that contains the other parts of this homework or it can be in separate project on its own)
 
 
-#### Features
+#### Features / Requirements
+
+Requirements
+
+* you'll need a way to store multiple die rolls; we don't know <code>Array</code>s yet (the _sort of_ equivalent of lists in Python)... so you'll probably make heavy use of <code>String</code>s and <code>char</code>s... as well as methods in the <code>Character</code> class.
+* in particular, there's a method not mentioned in the book called:
+    <pre><code data-trim contenteditable>
+Character.getNumericValue(ch)    
+</code></pre>
+* you'll need it to convert characters to the <code>int</code> value that they represent (rather than the unicode code point)
+* [check out the documentation for more details - https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#getNumericValue(char)](https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#getNumericValue(char))
+
+Features
 
 * roll 5 6-sided dice
 * print out the results of each die roll, with each die numbered from 1 through 5
@@ -302,6 +314,7 @@ Die Roll 5 - ⚀ (1)
     * add the roll do your collection of pinned dice
     * print out a message that says: <code>Automatically pin last die</code>
 * once all of the dice are pinned, print out the player's score
+
 
 #### Example Output
 
