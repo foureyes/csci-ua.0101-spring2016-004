@@ -165,7 +165,7 @@ Error parsing base-2 number
 
 <a name="part4"></a>
 
-## (10 points) Part 5 - Loan Amortization Schedule
+## (15 points) Part 5 - Loan Amortization Schedule
 
 <pre><code data-trim contenteditable>                   _._._                       _._._
                   _|   |_                     _|   |_
