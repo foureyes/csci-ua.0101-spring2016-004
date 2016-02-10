@@ -2,13 +2,13 @@
 layout: homework
 title: "Assignment #3"
 ---
-# Assignment #3 - Due Tuesday, Feb 17th at 11PM
+# Assignment #3 - Due Tuesday, Feb 16th at 11PM
 
 * [Readings](#readings)
-* [Draw a Card](#part2)
-* [Flipping a Coin](#part3)
-* [Bin Hex Dec](#part4)
-* [Loan Amortization Schedule](#part5)
+* [Wish List](#part2)
+* [Bin Hex Dec](#part3)
+* [Loan Amortization Schedule](#part4)
+* [Play Threes Dice Game](#part5)
 
 <a name="readings"></a>
 
@@ -16,98 +16,68 @@ title: "Assignment #3"
 
 Read __Chapter #4__ and __Chapter #5__ in your book, _{{site.book}}_ (covers Math class, chars, Strings, formatting, while loops, and for loops). Also see __Appendix F__ on Number Systems.
 
-You can save nested loops for the following assignment. 
+<a name="part2"></a>
 
-<a name="part3"></a>
 
-## (15 points) Part 3 - Flipping a Coin
+## (10 points) Part 2 - Wish List
 
-<pre><code data-trim contenteditable>         ..-"""""-..
-       .'    ___    '.
-      /    ."\  `\    \
-     ;    /, (    |    ;
-    ;    /_   '._ /     ;
-    |     |-  '._`)     |
-    ;     '-;-'  \      ;
-     ; """" /    \\    ;
-      \    '.__..-'   /
-   jgs '._ 1 9 9 9 _.'
-          ""-----""
+<pre><code data-trim contenteditable>
+           ________________________
+          /\                       \
+          \_|     ~ Wish List ~     |
+            |                       |
+            |   * pizza   $15.00    |
+            |   * unicorn $1000000  |
+            |   ____________________|_
+             \_/_____________________/
 
 </code></pre>
 
-### Flipping a Coin
+### Write a program that displays the two most expensive items in a wish list
 
 #### Overview
 
-Write a game that allows you to continually bet on a coin flip until you either quit or lose all of your money.
+Using your newly found Java looping skills, write a program that asks the user for a number... and then asks the user for that many wish list items (each with a name and a cost). Print out the two most expensive items on the wishlist.
 
 #### Setup
 
-* Create a class (<code>.java</code>) file called <code>CoinFlip.java</code>
+* Create a class (<code>.java</code>) file called <code>WishList.java</code>
 * (This can be within a project that contains the other parts of this homework or it can be in separate project on its own)
+
 
 #### Features
 
-* Start the user with $100
-* As long as the user doesn't quit, and as long as they have money...
-	* Continually ask them <code>Type "heads", "tails", or "quit"</code>, __ignoring case__
-	* If they do not enter any of the above, print out <code>"Huh?"</code> and ask again
-	* If they choose quit, end the game and print out <code>"See ya later!"</code>
-	* If they choose either heads or tails
-		* Ask the player how much they want to bet
-		* Flip the coin (feel free to include a bias, if you like, but add a comment about it)
-		* If they guessed the coin flip correctly, add their bet to their total money
-		* Otherwise, substract their bet from their total money
-		* If they have 0 or less money, end the game and print out <code>You're outta money!</code>
-	
+* ask the user: <code>How many items do you want in your wish list?</code>
+* if they enter a number less than 2, __default the number to 2__
+* ask the user ^^^^ for that many items...
+    * ask for a name
+    * ask for a cost
+* print out the name and cost of the __two most expensive items__
+
 #### Example Output
 
-__(Lose $25, win $50, quit.)__
-
-<pre><code data-trim contenteditable>Type "heads", "tails", or "quit"
-> heads
-How much are you going to bet?
-> 25
-The result is tails
-You lost $25!
-You now have $75
-Type "heads", "tails", or "quit"
-> tails
-How much are you going to bet?
-> 50
-The result is tails
-You made $50!
-You now have $125
-Type "heads", "tails", or "quit"
-> quit
-See ya later!
+<pre><code data-trim contenteditable>How many items do you want in your wish list?
+> 3
+What's the name of item 1?
+> walrus
+How much does it cost?
+> 45000
+What's the name of item 2?
+> pizza
+How much does it cost?
+> 15
+What's the name of item 3?
+> submarine
+How much does it cost?
+> 120000
+The most expensive items were:
+submarine - $120000.00
+walrus - $45000.00
 </code></pre>
 
-__(Type in command that is not heads, tails or quit.)__
+<a name="part3"></a>
 
-<pre><code data-trim contenteditable>Type "heads", "tails", or "quit"
-> bleargh!
-Huh?
-Type "heads", "tails", or "quit"
-> 
-</code></pre>
-
-__(Lose all money.)__
-
-<pre><code data-trim contenteditable>Type "heads", "tails", or "quit"
-> heads
-How much are you going to bet?
-> 120
-The result is tails
-You lost $120!
-You now have $-20
-You're outta money!
-</code></pre>
-
-<a name="part4"></a>
-
-## (15 points) Part 4 - Hex Bin Dec
+## (15 points) Part 3 - Hex Bin Dec
 
 <pre><code data-trim contenteditable> _____ _____ __ __    _____ _____ _____    ____  _____ _____ 
  |  |  |   __|  |  |  | __  |     |   | |  |    \|   __|     |
@@ -193,29 +163,24 @@ __(Number contains invalid digit for chosen base after prefix - there is no A di
 Error parsing base-2 number
 </code></pre>
 
-<a name="part5"></a>
+<a name="part4"></a>
 
-## (15 points) Part 5 - Loan Amortization Schedule
+## (10 points) Part 5 - Loan Amortization Schedule
 
-<pre><code data-trim contenteditable>                            (   )
-                          (    )
-                           (    )
-                          (    )
-                            )  )
-                           (  (                  /\
-                            (_)                 /  \  /\
-                    ________[_]________      /\/    \/  \
-           /\      /\        ______    \    /   /\/\  /\/\
-          /  \    //_\       \    /\    \  /\/\/    \/    \
-   /\    / /\/\  //___\       \__/  \    \/
-  /  \  /\/    \//_____\       \ |[]|     \
- /\/\/\/       //_______\       \|__|      \
-/      \      /XXXXXXXXXX\                  \
-        \    /_I_II  I__I_\__________________\
-               I_I|  I__I_____[]_|_[]_____I
-               I_II  I__I_____[]_|_[]_____I
-               I II__I  I     XXXXXXX     I
-            ~~~~~"   "~~~~~~~~~~~~~~~~~~~~~~~~
+<pre><code data-trim contenteditable>                   _._._                       _._._
+                  _|   |_                     _|   |_
+                  | ... |_._._._._._._._._._._| ... |
+                  | ||| |  o NATIONAL BANK o  | ||| |
+                  | """ |  """    """    """  | """ |
+             ())  |[-|-]| [-|-]  [-|-]  [-|-] |[-|-]|  ())
+            (())) |     |---------------------|     | (()))
+           (())())| """ |  """    """    """  | """ |(())())
+           (()))()|[-|-]|  :::   .-"-.   :::  |[-|-]|(()))()
+           ()))(()|     | |~|~|  |_|_|  |~|~| |     |()))(()
+              ||  |_____|_|_|_|__|_|_|__|_|_|_|_____|  ||
+           ~ ~^^ @@@@@@@@@@@@@@/=======\@@@@@@@@@@@@@@ ^^~ ~
+                ^~^~                                ~^~^
+          Sher^
 </code></pre>
 
 ### Problem 5.22 in 10th Edition of {{site.book}}: Loan Amortization Schedule
@@ -268,6 +233,101 @@ Payment#     Interest     Principal    Balance
 </code></pre>
 
 
+
+<a name="part5"></a>
+
+## (15 points) Part 5 - Play Threes
+
+<pre><code data-trim contenteditable>                       _______
+                      /o      /|
+          _______    /______o/ |
+         /o      /|  |o     o|o|            
+        /______o/ |  |   o   | /                
+        |o     o|o|  |o     o|/                
+        |   o   | /  '-------'             
+        |o     o|/                    
+        '-------'
+            
+</code></pre>
+
+### Implement a single round of playing a dice game called threes
+
+#### Overview
+
+Threes is a dice game where the goal is to get the lowest score (with each die face counting for that value, with the exception of threes, which count as 0). 
+
+1. A player starts off buy rolling 5 dice. 
+2. The player then chooses 1 or more dice to _pin_ (that is, to count towards their score). 
+3. Once at least 1 die is pinned, the player rolls the remaining dice...
+4. The player then chooses 1 or more dice to pin
+5. This process repeats until the player either pins all of the remaining dice, or there's only 1 die left, and the player is forced to pin that die
+6. Add the values of all of the rolls 
+    * (again with threes counting as 0)
+    * for example, if the pinned dice were: 1, 4, 1, 2, 3
+    * ...then the score would be: 8
+
+Here's another description of the rules for this dice game:
+
+[http://rpasmd.org/rms/Dice_Pages/Dice_Game_Threes_Away.htm](http://rpasmd.org/rms/Dice_Pages/Dice_Game_Threes_Away.htm)
+
+#### Setup
+
+* Create a class (<code>.java</code>) file called <code>PlayThrees.java</code>
+* (This can be within a project that contains the other parts of this homework or it can be in separate project on its own)
+
+
+#### Features
+
+* roll 5 6-sided dice
+* print out the results of each die roll, with each die numbered from 1 through 5
+    <pre><code data-trim contenteditable>Die Roll 1 - ⚀ (1)
+Die Roll 2 - ⚃ (4)
+Die Roll 3 - ⚄ (5)
+Die Roll 4 - ⚀ (1)
+Die Roll 5 - ⚀ (1)
+</code></pre>
+* use the following unicode literals for the die faces, and put the actual value in parentheses:
+    * <code>\u2680</code> &#x2680; (1)
+    * <code>\u2681</code> &#x2681; (2)
+    * <code>\u2682</code> &#x2682; (3)
+    * <code>\u2683</code> &#x2683; (4)
+    * <code>\u2684</code> &#x2684; (5)
+    * <code>\u2685</code> &#x2685; (6)
+* ask the user to enter the numbers of the rolls that they would like to _pin_ for their score
+    * they have to choose at least 1 die roll
+    * they can pin more than 1 by typing in each roll number they'd like to pin
+    * for example, typing in 34 pins rolls 3 and 4 (which correspond to the values 4 and 1)
+* display the pinned dice <code>Pinned: &#x2683; &#x2685; (34) </code>
+* if there's only one die rolled, automatically pin that die for the user
+    * add the roll do your collection of pinned dice
+    * print out a message that says: <code>Automatically pin last die</code>
+* once all of the dice are pinned, print out the player's score
+
+#### Example Output
+
+__(Pinning multiple dice, automatically pin roll if only 1 die)__
+
+<pre><code data-trim contenteditable>Enter numbers of dice to pin... for example, to pin the die 1 and 2, enter 12):
+Die Roll 1 - ⚀ (1)
+Die Roll 2 - ⚃ (4)
+Die Roll 3 - ⚄ (5)
+Die Roll 4 - ⚀ (1)
+Die Roll 5 - ⚀ (1)
+> 145
+Pinned: ⚀ ⚀ ⚀ (111)
+Enter numbers of dice to pin... for example, to pin the die 1 and 2, enter 12):
+Die Roll 1 - ⚀ (1)
+Die Roll 2 - ⚁ (2)
+> 1
+Pinned: ⚀ ⚀ ⚀ ⚀ (1111)
+Enter numbers of dice to pin... for example, to pin the die 1 and 2, enter 12):
+Die Roll 1 - ⚃ (4)
+Automatically pin last die
+Pinned: ⚀ ⚀ ⚀ ⚀ ⚃ (11114)
+Your score is 8!
+</code></pre>
+
+
 # Submission Process
 
 * Submit assignment via NYU Classes
@@ -282,4 +342,3 @@ Payment#     Interest     Principal    Balance
 * -2 points: files and classes are not named according to instructions
 * -2 points: inconsistent style using curly braces, inconsistent use of spaces and indentation, lack of comments
 * see individual projects for points per feature
-

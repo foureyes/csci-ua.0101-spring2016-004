@@ -7,9 +7,9 @@ nav-state: assignments
 ## Assignments
 
 * [Assignment #1](assignments/hw01.html)
-{% comment %}
 * [Assignment #2](assignments/hw02.html)
 * [Assignment #3](assignments/hw03.html)
+{% comment %}
 * [Assignment #4](assignments/hw04.html)
 * [Assignment #5](assignments/hw05.html)
 * [Assignment #6](assignments/hw06.html)

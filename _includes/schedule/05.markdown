@@ -17,7 +17,7 @@
 * __Chapter 5__ - Loops
 </td>
 	<td markdown="block">
-<!--
-* [](assignments/.html)
--->
+Assignment Due Feb 10th
+
+* [Assignment #3](assignments/hw03.html)
 </td>
