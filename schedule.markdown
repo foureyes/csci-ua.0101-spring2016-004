@@ -104,10 +104,8 @@ TODO:
 * Passing Arguments by Value
 * Scope
 * Stack Frames
-{% comment %} TODO: old class 8 {% endcomment %}
 </td>
 {% include schedule/07.markdown %}
-<td></td><td></td><td></td>
  </tr>
 
 
@@ -119,12 +117,8 @@ TODO:
 * Array Basics
 * Arrays and Methods
 * Copying, Searching and Sorting Arrays
-{% comment %} TODO: old class 9 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/08.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
