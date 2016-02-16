@@ -1,5 +1,6 @@
 	<td markdown="block">
 * [Arrays Continued](slides/10/arrays-continued.html)
+{% comment %}
 * Midterm #1
 	* [Practice Questions](resources/handouts/midterm_1/midterm_1_practice.pdf)
 	* [Practice Questions Solutions](resources/handouts/midterm_1/midterm_1_practice_solutions.pdf)
@@ -15,6 +16,7 @@
 	* [Pyramid1](resources/code/hw04-solutions/Pyramid1.java)
 * Homework #5 Solutions
 	* to be posted Monday evening
+{% endcomment %}
 </td>
 	<td markdown="block">
 * __Chapter 7__ - Single-Dimensional Arrays
