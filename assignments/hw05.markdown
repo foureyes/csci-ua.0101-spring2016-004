@@ -1,0 +1,235 @@
+---
+layout: homework
+title: "Assignment #5"
+---
+# Assignment #5 - Due Sunday, March 1st, at 11PM
+
+* [Readings](#readings)
+* [Array Utilities](#part2)
+
+<a name="readings"></a>
+
+## Part 1 - Readings
+
+Read __Chapter #7__ (on Arrays) in your book, _{{site.book}}_.
+
+
+<a name="part2"></a>
+
+## (35 points) Part 2 - Array Utilities
+
+<pre><code data-trim contenteditable>+---+---+---+---+---+---+---+---+
+|22 |27 |89 |90 |91 |62 |61 |50 |
++---+---+---+---+---+---+---+---+
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
++---+---+---+---+---+---+---+---+
+</code></pre>
+
+### Array Utility Methods
+
+#### Overview
+
+Write the Array utility methods specified below. They include simulating Python's range function, Array concatenation, etc.
+
+Note that __if there is an equivalent built-in method in Java__, you cannot use it. For example, there is a <code>toString</code> method in <code>java.utils.Arrays</code>. You cannot use that method when implementing your own version of <code>toString</code>!
+
+* (5 points)<code>toString(int[] arr)</code>
+* (1 point) <code>prettyPrint(int[] arr)</code>
+* (6 points) <code>randomInts(int size, int minVal, int maxVal)</code>
+* (7 points) <code>range(int start, int stop, int step)</code>
+* (1 point) <code>range(int start, int stop)</code>
+* (1 point) <code>range(int stop)</code>
+* (5 points) <code>concat(int[] arr1, int[] arr2)</code>
+* (5 points) <code>subArray(int[] arr, int index)</code>
+* (4 points) <code>average(int[] arr)</code>
+
+#### Setup
+
+* Create a class (<code>.java</code>) file called <code>ArrayUtils.java</code>
+* (This can be within a project that contains the other parts of this homework or it can be in separate project on its own)
+#### Features
+
+Use the method headers and documentation below for your implementation. Test your implementation using the test cases at the end (you can drop these test cases in main).
+
+<pre><code data-trim contenteditable>
+/** 
+ * Gives back a String representation of an Array
+ * 
+ * @param arr - the array to be converted to a String
+ * @return - a String version of the Array as specified below
+ * 
+ * an empty array should be "[]"
+ * an Array with a single element looks like "[1]"
+ * an Array with multiple elements, should separated by commas and spaces "[1, 2]"
+ * (this mimics java.util.Arrays.toString!)
+ */
+public static String toString(int[] arr)
+
+/**
+ * Prints a formatted version of an Array
+ *
+ * @param arr - the array to be printed
+ * @return - does not return a value
+ * 
+ * ...does not return anything
+ * should rely on your toString method
+ * (this one is really short!)
+ */
+public static void prettyPrint(int[] arr)
+	
+/**
+ * Creates an Array of ints with random values
+ * 
+ * @param size - the size of the Array
+ * @param minVal - the minimum possible random value
+ * @param maxVal - the maximum possible random value
+ * @return - an Array of ints
+ * 
+ * if the size of the Array is 0 or less, give back an empty Array... []
+ * if max is less than min... (that is, the range of possible values is 0 or less! 
+ * ... just default to all 0's 
+ * a range of random values can include negative numbers 
+ * the formula (if sticking with Math.random()) is:
+ *
+ * min + (int) (random double * (range of values + 1))
+ * minVal + (int) (Math.random() * (range + 1));
+ */
+public static int[] randomInts(int size, int minVal, int maxVal)
+
+/**
+ * Creates an Array of numbers based on arithmetic sequence
+ * 
+ * @param start - the number to start with
+ * @param stop - the number the range goes up to (but does not include!)
+ * @param step - the increment/decrement to get from start to stop
+ * @return - an Array of ints
+ * 
+ * Similar to Python's range...
+ * range(1, 10, 1); // start at 1, go up to 9 by 1's -> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ * range(-10, 11, 1); // start at -10, go up to 10 by 1's -> [-10, -9, ... 10]
+ * range(-10, -4, 1); // start at -10, go up to -5 by 1's -> [-10, -9, -8, -7, -6, -5]
+ * range(12, -1, -3); // start at 12, go down to 0 by 3's -> [12, 9, 6, 3, 0]
+ * range(1, 10, 0); // 0 step should return empty -> []
+ * range(1, 10, -1); // negative step when stop is greater than start should return empty -> []
+ */
+public static int[] range(int start, int stop, int step) 
+
+/**
+ * Two argument version has default step of 1
+ * (just reuse a previously defined method to implement this... should be one line!)
+ */
+public static int[] range(int start, int stop) 
+
+/**
+ * One argument version of range has default step of 1 and a default start of 0
+ * (just reuse a previously defined method to implement this... should be one line!)
+ */
+public static int[] range(int stop) 
+
+/**
+ * Creates a new Array by joining two existing Arrays
+ * 
+ * @param arr1 - first Array to be joined 
+ * @param arr2 - second Array to be joined
+ * @return - a new Array with arr1 at the beginning and arr2 at the end
+ *
+ * joins two arrays to produce a new Array
+ * [1, 2] + [3, 4] -> [1, 2, 3, 4]
+ * [] + [1] -> [1]
+ * [] + [] -> []
+ */
+public static int[] concat(int[] arr1, int[] arr2)
+
+
+/**
+ * Creates a new Array from a consecutive sequence of elements of another Array
+ * 
+ * @param arr - source Array
+ * @param index - start index
+ * @return - a new Array 
+ *
+ * behaves like the 1 argument version of substring...
+ * creates a new Array starting at supplied index... up to the end of of the source Array
+ *
+ * an index that doesn't exist in the new Array should give back an empty Array
+ * [1, 2, 3, 4] with start index of 2 -> [3, 4]
+ * [1, 2, 3, 4] with start index of 8 -> []
+ */
+public static int[] subArray(int[] arr, int index)
+
+/**
+ * Calculates average of all elements in an int Array 
+ *
+ * @param arr - the Array to calculate the average of
+ * @return - average of all elements in Array
+ */
+public static double average(int[] arr) {
+</code></pre>
+		
+__Place the following code in your main... to test your methods.__ &rarr;
+
+<pre><code data-trim contenteditable>
+int[] noNumbers = {};
+int[] oneNumber = {5};
+int[] evenNumbers = {2, 4, 6, 8, 10};
+
+System.out.println("Test prettyPrint");
+prettyPrint(noNumbers); // empty array should print out []
+prettyPrint(oneNumber); // one element should print out [5]
+prettyPrint(evenNumbers); // multiple elements should print out [2, 4, 6, 8, 10]
+
+System.out.println("Test randomInt");
+prettyPrint(randomInts(5, 1, 100)); // should return 5 random numbers from 1 to 100 -> [88, .. 4]
+prettyPrint(randomInts(-1, 1, 100)); // negative size should return empty -> []
+prettyPrint(randomInts(0, 1, 100)); // zero size should return empty -> []
+prettyPrint(randomInts(5, 100, 100)); // same min max should return all the same number -> [100, ... 100]
+prettyPrint(randomInts(5, 100, 1)); // max lower than min should return all 0's -> [0, ... 0]
+prettyPrint(randomInts(20, -5, 5)); // include negative numbers should return mix of numbers in range -> [3, 1, -5 ... 2]
+
+System.out.println("Test range");
+prettyPrint(range(1, 10, 1)); // start at 1, go up to 9 by 1's -> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+prettyPrint(range(-10, 11, 1)); // start at -10, go up to 10 by 1's -> [-10, -9, ... 10]
+prettyPrint(range(-10, -4, 1)); // start at -10, go up to -5 by 1's -> [-10, -9, -8, -7, -6, -5]
+prettyPrint(range(12, -1, -3)); // start at 12, go down to 0 by 3's -> [12, 9, 6, 3, 0]
+prettyPrint(range(1, 10, 0)); // 0 step should return empty -> []
+prettyPrint(range(1, 10, -1)); // negative step when stop is greater than start should return empty -> []
+
+prettyPrint(range(5)); // one argument version defaults to start at 0 and step of 1 -> [0, 1, 2, 3, 4]
+prettyPrint(range(5, 10)); // two argument version defaults to step of 1 -> [5, 6, 7, 8, 9]
+
+System.out.println("Test concat");
+prettyPrint(concat(noNumbers, noNumbers)); // adding two empty -> []
+prettyPrint(concat(noNumbers, oneNumber)); // adding one element to empty -> [5]
+prettyPrint(concat(oneNumber, evenNumbers)); // -> [5, 2, 4, 6, 8, 10]
+prettyPrint(concat(evenNumbers, evenNumbers)); // -> [2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
+
+System.out.println("Test subArray");
+prettyPrint(subArray(evenNumbers, 0)); // start from beginning gives back entire Array -> [2, 4, 6, 8, 10]
+prettyPrint(subArray(evenNumbers, 2)); // -> [6, 8, 10]
+prettyPrint(subArray(evenNumbers, 8)); // start from index beyond length gives back empty -> []
+prettyPrint(subArray(oneNumber, 0)); // single element from 0 gives back one element Array -> [5]
+prettyPrint(subArray(noNumbers, 1)); // empty returns empty -> []
+
+System.out.println("Test average");
+System.out.println(average(noNumbers)); // no numbers... average is 0 -> 0
+System.out.println(average(evenNumbers)); // -> 6.0
+System.out.println(average(oneNumber)); // -> 5.0
+</code></pre>
+
+# Submission Process
+
+* Submit assignment via NYU Classes
+* Submit each <code>.java</code> file as a separate attachment
+	* only submit .java files (do not submit .class files or any other files that are created in Eclipse)
+	* you can find your .java files in the directory that you specified as your workspace... and within the project folder contained in the workspace directory
+
+
+# Grading Criteria
+
+* no credit: file does not compile
+* -2 points: files and classes are not named according to instructions
+* -2 points: inconsistent style using curly braces, inconsistent use of spaces and indentation, lack of comments
+* see individual projects for points per feature
+
+
+

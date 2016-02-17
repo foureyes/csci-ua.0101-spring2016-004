@@ -14,5 +14,8 @@
 <!--* [Debugging](lynda.com?)-->
 </td>
 	<td markdown="block">
+Assignment Due Feb 23rd
+
+* [Assignment #4](assignments/hw04.html)
 
 </td>
