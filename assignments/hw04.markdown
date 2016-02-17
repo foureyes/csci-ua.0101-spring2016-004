@@ -18,7 +18,7 @@ Read __Chapter #5__, __Chapter #6__ and __Chapter #7__ in your book, _{{site.boo
 
 <a name="part2"></a>
 
-## (15 points) Part 3 - Pyramid
+## (15 points) Part 2 - Pyramid
 
 <pre><code data-trim contenteditable>               '
               /=\\
@@ -90,7 +90,7 @@ __(User Enters 12.)__
 
 <a name="part3"></a>
 
-## (20 points) Part 4 - Credit Card
+## (20 points) Part 3 - Credit Card
 
 <pre><code data-trim contenteditable>                              ___
                             _|\  \__      
