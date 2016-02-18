@@ -14,6 +14,8 @@ title: "Nested Loops, Loops Odds and Ends"
 ## Patterns
 
 Let's try to use nested loops to generate the following patterns.
+
+[This format string specifier guide may come in handy](http://alvinalexander.com/programming/printf-format-cheat-sheet)
 </section>
 
 <section markdown="block">
@@ -88,7 +90,8 @@ for (int i = size; i >= 1; i--) {
 <section markdown="block">
 ## Triangle 3
 
-<pre><code data-trim contenteditable>
+<pre><code data-trim contenteditable>       
+Triangle 3...
           1 
         2 1 
       3 2 1 

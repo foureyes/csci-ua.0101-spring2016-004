@@ -241,9 +241,9 @@ public static void addFive(int n) {
 <section markdown="block">
 ## Passing Arrays as Parameters Finale
 
-Sooo... when we call a method with an Array as a parameter... we're _passing by sharing_. 
+Sooo... when we call a method with an Array as a parameter... we're _passing by value_, and the value that we're passing is a reference (sometimes this is also called _passing by sharing_ in other languages, such as Python and JavaScript). 
 
-* the body of the method gets a __references__ to the _actual_ Array
+* the body of the method gets a __reference__ to the _actual_ Array
 * any modifications we do to it will be on the Array itself!
 * (so the effects can be seen outside of the method!)
 

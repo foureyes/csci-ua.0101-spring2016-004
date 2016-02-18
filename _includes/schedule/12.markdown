@@ -1,5 +1,7 @@
 	<td markdown="block">
+{% comment %}
 * [About Class #12](slides/12/meta.html)
+{% endcomment %}
 * [Commenting Code / Java Documentation](slides/12/comments.html)
 * [Arrays as References / Processing Arrays in Place](slides/12/arrays-in-place.html)
 * [Multi-Dimensional Arrays](slides/12/nested-arrays.html)
@@ -16,16 +18,20 @@
 
 Assignments
 
+{% comment %}
 * Read Chapter #8 on Multi-Dimensional Arrays
 * [Homework #6](assignments/hw06.html)
+{% endcomment %}
 
 Code Samples
 
 (of varying quality!)
 
+{% comment %}
 * [Shift](../resources/code/class12/Shifty.java)
 * [Swap](../resources/code/class12/Swappy.java)
 * [Selection Sort](../resources/code/class12/SelectionSort.java)
 * [Binary Search](../resources/code/class12/BinarySearch.java)
+{% endcomment %}
 
 </td>

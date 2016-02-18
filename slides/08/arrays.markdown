@@ -238,7 +238,7 @@ for(int i = 0; i < randomNumbers.length; i++) {
 	}
 	if (randomNumbers[i] < smallest) {
 		smallest = randomNumbers[i];
-	}section
+	}
 }
 </code></pre>
 </section>
