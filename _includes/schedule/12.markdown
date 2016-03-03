@@ -4,9 +4,9 @@
 {% endcomment %}
 * [Commenting Code / Java Documentation](slides/12/comments.html)
 * [Arrays as References / Processing Arrays in Place](slides/12/arrays-in-place.html)
-* [Multi-Dimensional Arrays](slides/12/nested-arrays.html)
 
 {%comment%} 
+* [Multi-Dimensional Arrays](slides/12/nested-arrays.html)
 * [Setting Up Processing](slides/12/nested-arrays.html)
 {%endcomment%}
 
