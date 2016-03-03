@@ -51,7 +51,7 @@ public static String computerMove(int a, int b, int c, int d) {
 Using single letter variable names was nice and terse, but it was pretty difficult to _grok_ / understand what was going on. This is a little bit easier, right? __Describe what the method does now?__ &rarr;
 
 <pre><code data-trim contenteditable>
-public static String getComputerMove1(int rollTotal, int opponentScore, int winningScore, int threshold) {
+public static String getComputerMove1( int rollTotal, int opponentScore, int winningScore, int threshold) {
   if (opponentScore >= winningScore - threshold || rollTotal < 20) {
     return "r";
   } else {
@@ -68,8 +68,10 @@ public static String getComputerMove1(int rollTotal, int opponentScore, int winn
 
 Because Java is __not whitespace significant__, you can break up that long line like so:
 <pre><code data-trim contenteditable>
-public static String getComputerMove1(int rollTotal, int opponentScore, 
-      int winningScore, int threshold) {
+public static String getComputerMove1(
+    int rollTotal, int opponentScore, 
+    int winningScore, int threshold) {
+
   if (opponentScore >= winningScore - threshold || rollTotal < 20) {
     return "r";
   } else {
@@ -262,7 +264,7 @@ To generate documentation, you use (surprise) a tool called <code>javadoc</code>
 	* project &rarr;
 	* generate javadoc
 	* check the <code>doc</code> directory in your workspace/project folder
-* __let's try it!__ &Rarr;
+* __let's try it!__ &rarr;
 
 Hey. That format looks really familiar. __Where did we see it before, and what does that imply?__ &rarr;
 

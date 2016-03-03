@@ -16,9 +16,11 @@
 </td>
 	<td markdown="block">
 
-Assignments
+Assignments and Quiz
 
-* small assignment to be posted this evening
+* very small assignment to be posted this evening
+* 2 quizzes
+* all due Thursday (most likely)
 {% comment %}
 * Read Chapter #8 on Multi-Dimensional Arrays
 * [Homework #6](assignments/hw06.html)

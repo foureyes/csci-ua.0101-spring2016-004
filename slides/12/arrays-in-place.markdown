@@ -74,7 +74,7 @@ The output looks like this... (__why?__ &rarr;)
 [4, 6, 8]
 </code></pre>
 
-* {:.fragment} you're actually passing a reference to the Array
+* {:.fragment} the value being passed in to your method is a reference to the Array
 * {:.fragment} (Arrays are reference types, remember? Their variable stores a reference to an area in memory, the __heap__, that stores the actual Array)
 * {:.fragment} that means that whatever you do to the argument within the method affects the variable outside of the method 
 * {:.fragment} (the variables are pointing to the same Array)
@@ -299,7 +299,7 @@ __What's the simplest way to search.__ &rarr;
 Another search algorithm is __Binary Search__:
 
 * the Array is sorted
-* find the midpoint index (round down... __why?__)
+* find the midpoint index 
 * if the element at the midpoint is:
 	* greater than what you're looking for, do the same search but in the half of the array before the midpoint
 	* less than, search after the midpoint array
