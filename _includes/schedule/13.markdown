@@ -1,5 +1,7 @@
 	<td markdown="block">
+{% comment %}
 * [About Class #13](slides/13/meta.html)
+{% endcomment %}
 * [Modelling Data](slides/13/modelling-data.html)
 * [Multi-Dimensional Arrays](slides/13/nested-arrays.html)
 </td>

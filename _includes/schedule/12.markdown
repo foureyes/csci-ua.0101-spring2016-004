@@ -18,16 +18,17 @@
 
 Assignments
 
+* small assignment to be posted this evening
 {% comment %}
 * Read Chapter #8 on Multi-Dimensional Arrays
 * [Homework #6](assignments/hw06.html)
 {% endcomment %}
 
+{% comment %}
 Code Samples
 
 (of varying quality!)
 
-{% comment %}
 * [Shift](../resources/code/class12/Shifty.java)
 * [Swap](../resources/code/class12/Swappy.java)
 * [Selection Sort](../resources/code/class12/SelectionSort.java)

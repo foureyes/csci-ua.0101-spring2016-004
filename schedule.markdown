@@ -192,10 +192,7 @@ TODO:
 * finish up exercises from previous? or don't include in topics
 * use shapes and images from old class 15
 {% endcomment %}
-{% comment %}
 {% include schedule/13.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
