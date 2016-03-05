@@ -13,7 +13,7 @@ title: "Assignment #5"
 
 ## Part 1 - Readings
 
-Read __Chapter #5__, __Chapter #6__ and __Chapter #7__ in your book, _{{site.book}}_ (covers nested loops, methods, and Arrays). 
+Read __Chapter #7__, and __Chapter #8__ in your book, _{{site.book}}_ (covers Arrays and Multidimensional Arrays). 
 
 
 <a name="part2"></a>
