@@ -13,14 +13,15 @@
 </td>
 	<td markdown="block">
 * __Chapter 8__ - Multidimensional Arrays
+* __Chapter 9__ - Objects and Classes
 </td>
 	<td markdown="block">
 
-Assignments and Quiz
+Assignment and Quiz Due March 10th
 
-* very small assignment to be posted this evening
-* 2 quizzes
-* all due Thursday (most likely)
+* [Assignment #5](assignments/hw05.html)
+* [Quiz #6](assignments/hw05.html) (based on Chapter 9, Objects and Classes)
+
 {% comment %}
 * Read Chapter #8 on Multi-Dimensional Arrays
 * [Homework #6](assignments/hw06.html)

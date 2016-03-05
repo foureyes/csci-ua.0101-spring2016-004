@@ -1,0 +1,6 @@
+---
+layout: homework
+title: "Assignment #6"
+---
+# Assignment #6 - Due Thursday, March 10th, at 11PM
+
