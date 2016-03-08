@@ -142,6 +142,7 @@ After importing <code>core.jar</code> to a project and adding it to the __build 
 3. {:.fragment} optionally implement either of the two methods (both methods are automatically called - __when are they called and how frequently?)__ &rarr;
 	* {:.fragment} <code>public void setup</code> <span class="fragment">(called once when the program starts)</span>
 	* {:.fragment} <code>public void draw</code> <span class="fragment">(called repeatedly)</span>
+4. {:.fragment} add this to your main method: PApplet.main("Title of Your 'Program'");
 
 </section>
 
@@ -151,20 +152,23 @@ After importing <code>core.jar</code> to a project and adding it to the __build 
 __Let's try dropping those methods in a program. Do you see anything there that's different from how we usually declare methods?__  &rarr;
 
 <pre><code data-trim contenteditable>
+static public void main(String[] args) {
+    PApplet.main("My Program!");
+}
 public void setup() {
 }
 public void draw() {
 }
 </code></pre>
 
-<span class="fragment">They're not <code>static</code>! ... We'll see why in next week's class. For now, however, drop the keyword <code>static</code> for these methods</span>
+<span class="fragment">setup and draw are not <code>static</code>! ... We'll see why in next week's class. For now, however, drop the keyword <code>static</code> for these methods</span>
 
-<span class="fragment">In fact, you shouldn't use <code>static</code> in __any__ of your method definitions for our first processing programs.</span>
+<span class="fragment">In fact, you shouldn't use <code>static</code> in __any__ of your method definitions for our first processing programs (except for main, of course).</span>
 
 </section>
 
 <section markdown="block" data-background="#440000">
-# In our first Processing sketches, don't use static in any of your method definitions. (We'll see why next week).
+# In our first Processing sketches, don't use static in any of your method definitions, except for main, of course. 
 
 </section>
 
