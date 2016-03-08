@@ -185,7 +185,7 @@ TODO:
 <tr><td>13</td><td><strong>Mar 8</strong><br>Tue</td>
 <td markdown="block">
 * Multidimensional Arrays Continued
-* Graphics Programming With Processing
+* Graphics Programming With Processing (Maybe?)
 </td>
 {% comment %}
 TODO: 
@@ -199,7 +199,7 @@ TODO:
 <!-- ------------ --><a name="14"></a>
 <tr><td>14</td><td><strong>Mar 10</strong><br>Thu</td>
 <td markdown="block">
-* Graphics Programming With Processing Continued
+* Graphics Programming With Processing
 {% comment %}
 TODO: 
 * use images from class 16 .... wallaby and apples
@@ -207,9 +207,7 @@ TODO:
 {% endcomment %}
 {% comment %}{% endcomment %}
 </td>
-{% comment %}
 {% include schedule/14.markdown %}
-{% endcomment %}
 <td></td><td></td><td></td>
  </tr>
 
@@ -226,10 +224,7 @@ TODO:
 * Objects and Classes 
 {% comment %} TODO: old class 16 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/15.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
