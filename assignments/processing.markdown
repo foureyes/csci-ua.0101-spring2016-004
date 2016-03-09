@@ -53,48 +53,52 @@ Use the following code in your <code>.java</code> file:
 <pre><code data-trim contenteditable>import processing.core.*; 
 
 public class ProcessingDemo extends PApplet{
+    public static void main(String[] args) {
+        PApplet.main("ProcessingDemo");
+    }
 
-	// hey. we've seen multidimensional arrays before!
-	// this will store our coordinates, as well as velocity
-	int[][] coords = new int[1000][4];
-	public static final int WIDTH = 640, HEIGHT = 480;
-	public static final int MAX_DX = 3, MAX_DY = 3;
-	
-	// cheap way to make indexes more readable
-	public static final int X = 0, Y = 1, DX = 2, DY = 3;
-	
-	// called once
-	public void setup() {
-		size(WIDTH, HEIGHT); 
-		frameRate(30);
-		fill(coords);
-	}
+    // hey. we've seen multidimensional arrays before!
+    // this will store our coordinates, as well as velocity
+    int[][] coords = new int[1000][4];
+    public static final int WIDTH = 640, HEIGHT = 480;
+    public static final int MAX_DX = 3, MAX_DY = 3;
+    
+    // cheap way to make indexes more readable
+    public static final int X = 0, Y = 1, DX = 2, DY = 3;
+    
+    // called once
+    public void setup() {
+        size(WIDTH, HEIGHT); 
+        frameRate(30);
+        fill(coords);
+    }
 
-	// called repeatedly
-	public void draw() { 
-		 background(0);
-		 for(int i = 0; i < coords.length; i++) {
-			 ellipse(coords[i][X], coords[i][Y], 3, 3);
-			 coords[i][X] += coords[i][DX];
-			 coords[i][Y] += coords[i][DY];
-			 if(coords[i][X] > WIDTH) {
-				 coords[i][X] = 0;
-			 }
-			 if(coords[i][Y] > HEIGHT) {
-				 coords[i][Y] = 0;
-			 }			 
-		 }
-	}
-	
-	public static void fill(int[][] arr) {
-		for(int i = 0; i < arr.length; i++) {
-			arr[i][0] = (int) (Math.random() * WIDTH) + 1;
-			arr[i][1] = (int) (Math.random() * HEIGHT) + 1;
-			arr[i][2] = (int) (Math.random() * MAX_DX) + 1;	
-			arr[i][3] = (int) (Math.random() * MAX_DY) + 1;	
-		}
-	}
+    // called repeatedly
+    public void draw() { 
+         background(0);
+         for(int i = 0; i < coords.length; i++) {
+             ellipse(coords[i][X], coords[i][Y], 3, 3);
+             coords[i][X] += coords[i][DX];
+             coords[i][Y] += coords[i][DY];
+             if(coords[i][X] > WIDTH) {
+                 coords[i][X] = 0;
+             }
+             if(coords[i][Y] > HEIGHT) {
+                 coords[i][Y] = 0;
+             }           
+         }
+    }
+    
+    public static void fill(int[][] arr) {
+        for(int i = 0; i < arr.length; i++) {
+            arr[i][X] = (int) (Math.random() * WIDTH) + 1;
+            arr[i][Y] = (int) (Math.random() * HEIGHT) + 1;
+            arr[i][DX] = (int) (Math.random() * MAX_DX) + 1;    
+            arr[i][DY] = (int) (Math.random() * MAX_DY) + 1;    
+        }
+    }
 }
+
 </code></pre>
 
 #### Example Output:
