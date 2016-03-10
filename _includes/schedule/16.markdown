@@ -2,11 +2,16 @@
 * [Objects and Classes](slides/16/oop.html)
 </td>
 	<td markdown="block">
+
 * __Chapter 9__ - Objects and Classes
+
+{% comment %}
 * [wallaby](resources/img/wallaby.jpg)
 * [apples](resources/img/apples-small.jpg)
+{% endcomment %}
 </td>
 	<td markdown="block">
+{% comment %}
 Assignments
 
 * Read Chapter #9 and #10 on Classes/Objects and Object Oriented Programming 
@@ -18,4 +23,5 @@ Code Samples
 * [CircleTest (uses Circel class above)](resources/code/class16/CircleTest.java)
 * [Student](resources/code/class16/Student.java)
 * [StudentTest (uses Student class above](resources/code/class16/StudentTest.java)
+{% endcomment %}
 </td>
