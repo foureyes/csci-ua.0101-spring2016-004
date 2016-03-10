@@ -104,9 +104,13 @@ Now, back to __Processing__.
 * __core.jar__ contains all of the Processing related classes that use in our actual program
 * when we add it to our program, we can use all of those classes (such as <code>PApplet</code>)
 * Processing was originally intended for creating __applets__, which are basically small Java programs that are run from your web browser
-* (that's why we add <code>extends PApplet</code> to our code to create a Processing application)
+* we add <code>extends PApplet</code> to our code to create a Processing application
+* Processing applications are sometimes called __sketches__ 
+* (Processing is used for _creative coding_, _graphics experiments_, and education)
 
 </section>
+
+{% comment %}
 <section markdown="block">
 ## Applets
 
@@ -131,18 +135,22 @@ If Processing programs are applets, __why don't we have to implement <code>init<
 * {:.fragment} (__Why couldn't we just uncompress <code>core.jar</code> to see the source code?__ &rarr;)
 
 </section>
+{% endcomment %}
 
 <section markdown="block">
 ## Setting Up a Processing Sketch
 
-After importing <code>core.jar</code> to a project and adding it to the __build path__, __what are the steps for starting a Processing application?__ &rarr;
+After importing <code>core.jar</code> to a project and adding it to the __build path__, __follow these steps for starting a Processing application?__ &rarr;
 
 1. {:.fragment} <code>import processing.core.PApplet;</code>
 2. {:.fragment} extend your class definition by adding <code>extends PApplet</code>
-3. {:.fragment} optionally implement either of the two methods (both methods are automatically called - __when are they called and how frequently?)__ &rarr;
+3. {:.fragment} create a main method 
+4. {:.fragment} in your main method... add: <code>PApplet.main("ClassName");</code>
+5. {:.fragment} <code>ClassName</code> must be the string representation of the name of the class that your code is in
+6. {:.fragment} if you have <code>package</code> defined, you must add it as a prefix: <code>"packagename.ClassName"</code>
+5. {:.fragment} optionally implement either of the two methods (both methods are automatically called - __when are they called and how frequently?)__ &rarr;
 	* {:.fragment} <code>public void setup</code> <span class="fragment">(called once when the program starts)</span>
 	* {:.fragment} <code>public void draw</code> <span class="fragment">(called repeatedly)</span>
-4. {:.fragment} add this to your main method: PApplet.main("Title of Your 'Program'");
 
 </section>
 
@@ -152,8 +160,8 @@ After importing <code>core.jar</code> to a project and adding it to the __build 
 __Let's try dropping those methods in a program. Do you see anything there that's different from how we usually declare methods?__  &rarr;
 
 <pre><code data-trim contenteditable>
-static public void main(String[] args) {
-    PApplet.main("My Program!");
+public static void main(String[] args) {
+    PApplet.main("ClassName");
 }
 public void setup() {
 }
@@ -189,7 +197,7 @@ For a full reference, check out the Processing site:
 <section markdown="block">
 ## Your Canvas!
 
-You can modify and access attributes of your applet's window by using the following Processing methods and variables:
+You can modify and access attributes of your sketch's window by using the following Processing methods and variables:
 
 * <code>background(r, g, b) // or just background(n) for grayscale</code>
 * <code>size(width, height) // window dimensions</code>
