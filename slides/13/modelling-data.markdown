@@ -181,8 +181,10 @@ Another way to represent a deck of cards is to use integers to __encode__ a card
 * {:.fragment} order the cards by suit and rank...
 	* {:.fragment} the first set of 13 cards represent one suit, the next another, etc.
 	* {:.fragment} (so we can use integer division by 13 to get an index for suit)
-	* {:.fragment} ranks are sequential as well, and every rank repeats every 13 cards, so 1 is an ace, 2 is 2, 15 is an ace, 16 is 2... etc.
-	* {:.fragment} (so we can use modulo 13 to get an index for rank)
+	* {:.fragment} ranks are sequential as well, and every rank repeats every 13 cards, so 1 is an ace, 2 is 2, 14 is an ace, 15 is 2... etc.
+	* {:.fragment} so we can use modulo 13 to get an index for rank
+    * {:.fragment} this is an __encoding scheme__ (we've seen encoding schemes before, in unicode and ascii!)
+    * {:.fragment} (the book starts from 0 rather than 1)
 * {:.fragment} shuffle
 * {:.fragment} create methods to decode a number into a suit and rank
 
@@ -248,7 +250,7 @@ for(int i = 0; i < 5; i++) {
 <section markdown="block">
 ## Utility Methods
 
-__Let's decode the int stored in the shuffled deck into a suit (/ 13) and a rank (% 13)__ &rarr;
+__Let's decode the int (subtract 1) stored in the shuffled deck into a suit (/ 13) and a rank (% 13).__ &rarr;
 
 <pre><code data-trim contenteditable>
 public static String getCard(int n) {
@@ -258,17 +260,17 @@ public static String getCard(int n) {
 
 <pre><code data-trim contenteditable>
 public static String getSuit(int n) {
-	// 13 cards per suit
-	String[] suits = {"♠", "♥", "♦", "♣"};
-	// assume int
-	return suits[n / 13];
+    // 13 cards per suit
+    String[] suits = {"♠", "♥", "♦", "♣"};
+    // assume int
+    return suits[(int) (n - 1)/ 13];
 }
 </code></pre>
 
 <pre><code data-trim contenteditable>
 public static String getRank(int n) {
-	String[] ranks = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
-	return ranks[n % 13];
+    String[] ranks = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+    return ranks[(n - 1) % 13];
 }
 </code></pre>
 
