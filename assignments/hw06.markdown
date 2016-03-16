@@ -196,7 +196,7 @@ Use the method(s) you created in part 1, Four in a Row, to create a Connect Four
 
 #### Setup
 
-* Create a class (<code>.java</code>) file called <code>ConnectFour.java</code>
+* Create a class (<code>.java</code>) file called <code>ConnectFourText.java</code> (and <code>ConnectFourProcessing</code> if you're doing extra credit)
 * (This can be within a project that contains the other parts of this homework or it can be in separate project on its own)
 
 #### Features
