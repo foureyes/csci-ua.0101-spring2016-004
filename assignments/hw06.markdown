@@ -176,7 +176,7 @@ The output should give back -1 for the first board, and 1 for the remainder of t
 
 ## (15 points) Part 3 - Connect Four Game!
 
-### (5 additional points extra credit - 20 total - for implementing graphical version instead of text version)
+### (10 additional points extra credit - 25 total - for implementing graphical version instead of text version)
 
 <pre><code data-trim contenteditable>    _..----------.._       _..----------.._       _..----------.._       _..----------.._   
  .-~                ~-. .-~                ~-. .-~                ~-. .-~                ~-.
