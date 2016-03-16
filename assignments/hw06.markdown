@@ -176,7 +176,7 @@ The output should give back -1 for the first board, and 1 for the remainder of t
 
 ## (15 points) Part 3 - Connect Four Game!
 
-### (10 additional points extra credit - 25 total - for implementing graphical version instead of text version)
+### (15 additional points extra credit - 30 total - for implementing graphical version instead of text version)
 
 <pre><code data-trim contenteditable>    _..----------.._       _..----------.._       _..----------.._       _..----------.._   
  .-~                ~-. .-~                ~-. .-~                ~-. .-~                ~-.
@@ -188,7 +188,7 @@ The output should give back -1 for the first board, and 1 for the remainder of t
 </code></pre>
 {%comment%}_{%endcomment%}
 
-### Connect Four Game
+## Connect Four Game
 
 #### Overview
 
@@ -230,15 +230,17 @@ __Graphical (extra credit version)__
 
 ![processing](../resources/img/connect-four-processing.gif)
 
-* to implement the graphical version, follow the same rules as the text version
-* implement these additional requirements
+* to submit the extra credit, implement a graphical version of connect four as specified below
+* additionally __specify which additional features you'll implement__ (see below)
+* the graphical version should follow the same rules as the text version
+* (10 points) implement these additional requirements
 	* the player's pieces are yellow
 	* the computer's pieces are blue
 	* if the mouse hovers over a column and it is clicked, it is a move for that player
-* your version does not have to implement the following features:
-	* the fade in for the pieces that are just played
-	* the color fade in for a win
-	* the column highlight on mouse hover
+* (5 points) implement any of these requirements (__specify which one in your assignment submission__)
+	* column highlight on mouse hover
+	* fade in for the pieces that are just played
+	* color fade in for a win
 
 #### Example Output
 
