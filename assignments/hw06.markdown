@@ -176,7 +176,7 @@ The output should give back -1 for the first board, and 1 for the remainder of t
 
 ## (15 points) Part 3 - Connect Four Game!
 
-### (15 additional points extra credit - 30 total - for implementing graphical version instead of text version)
+### (15 additional points extra credit - 30 total - for implementing both the graphical version and the text version)
 
 <pre><code data-trim contenteditable>    _..----------.._       _..----------.._       _..----------.._       _..----------.._   
  .-~                ~-. .-~                ~-. .-~                ~-. .-~                ~-.
@@ -204,9 +204,8 @@ Use the method(s) you created in part 1, Four in a Row, to create a Connect Four
 You can implement this game as:
 
 * a text-only game (15 points) 
-* a graphical game using processing (20 points)
+* and as a graphical game using processing (an additional 15 points)
 
-<code>Only implement one or the other; do not implement both!</code>
 
 __Text Only__
 
@@ -226,18 +225,18 @@ __Text Only__
 	* the board is checked for a win by the computer
 	* if there are consecutive pieces for the computer, the game ends immediately
 
-__Graphical (extra credit version)__
+__Graphical (extra credit)__
 
 ![processing](../resources/img/connect-four-processing.gif)
 
-* to submit the extra credit, implement a graphical version of connect four as specified below
-* additionally __specify which additional features you'll implement__ (see below)
+* to submit the extra credit, implement a graphical version of connect four using the instructions below
+* __specify which additional features you'll implement__ (see list under part 2)
 * the graphical version should follow the same rules as the text version
-* (10 points) implement these additional requirements
+* (10 points) __Part 1__ - implement these additional requirements
 	* the player's pieces are yellow
 	* the computer's pieces are blue
 	* if the mouse hovers over a column and it is clicked, it is a move for that player
-* (5 points) implement any of these requirements (__specify which one in your assignment submission__)
+* (5 points) __Part 2__ implement any of these requirements (__specify which one in your assignment submission__)
 	* column highlight on mouse hover
 	* fade in for the pieces that are just played
 	* color fade in for a win
