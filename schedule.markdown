@@ -244,10 +244,7 @@ TODO:
 * Objects and Classes Continued
 {% comment %} TODO: old class 18 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/17.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 

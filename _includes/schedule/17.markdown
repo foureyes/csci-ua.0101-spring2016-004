@@ -1,7 +1,7 @@
 	<td markdown="block">
-* [About Class #17](slides/17/meta.html)
 * [Objects and Classes Continued](slides/17/oop-continued.html)
 {% comment %}
+* [About Class #17](slides/17/meta.html)
 * [Debugging](slides/17/debugging.html)
 * [Object Oriented Thinking](slides/17/oop-thinking.html)
 {% endcomment %}
