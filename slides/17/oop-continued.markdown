@@ -89,7 +89,7 @@ public class BankAccount {
 __What's a constructor?__ &rarr;
 
 * {:.fragment} a __constructor__ is a special method in a class that is responsible for creating / initializing objects of that class
-* {:.fragment} __can you still create objects from a class without an explicitly defined constructor? why?__ &rarr;o
+* {:.fragment} __can you still create objects from a class without an explicitly defined constructor? why?__ &rarr;
 * {:.fragment} yes - there is a default constructor that has no parameters (only if no other constructors are defined!)
 * {:.fragment} based on our empty BankAccount class, we can start creating BankAccount objects even if a constructor is not yet explicitly defined... __let's try it__ &rarr;
 
@@ -240,7 +240,7 @@ __Can a class have more than one constructor?__ &rarr;
 
 * {:.fragment} yes -- a class can have more than one constructor, as long as the signatures differ (similar to method overloading)
 * {:.fragment} __let's add our no arg constructor back... and default the balance to 0, and the account number to a random number from 1 through 999999999(let's keep this simple, duplicates are ok and we don't care about length)__ &rarr;
-* {:.fragment} __let's create another account in our main program and print everything out__ &rarr;
+* {:.fragment} __create another account in main and print everything out__ &rarr;
 
 <pre class="fragment"><code data-trim contenteditable>
 // BankAccount.java
@@ -249,7 +249,7 @@ BankAccount() {
   balance = startingBalance = 0;
 }
 </code></pre>
-<pre><code data-trim contenteditable>
+<pre class="fragment"><code data-trim contenteditable>
 // BankAccountTest.java
 BankAccount myOtherAccount = new BankAccount();
 System.out.println(myOtherAccount.accountNumber);

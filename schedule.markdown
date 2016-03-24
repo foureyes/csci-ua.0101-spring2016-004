@@ -254,10 +254,7 @@ TODO:
 * Object Oriented Thinking
 {% comment %} TODO: old class 19 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/18.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 

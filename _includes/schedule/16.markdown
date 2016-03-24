@@ -1,4 +1,5 @@
 	<td markdown="block">
+* next exam reminder
 * [Objects and Classes](slides/16/oop.html)
 </td>
 	<td markdown="block">

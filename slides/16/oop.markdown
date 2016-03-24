@@ -19,10 +19,10 @@ Right. So, let's go back to a familiar problem.
 	* first name
 	* last name
 	* 10 homework grades (all ints)
-* you'd like to be able to access each data point above on their own (just pull out first name, for example), or as a group (retrieve a person's _full_ name)
-* you'd like to be able to run calculations on the homework grades (like average homework score)
+* you'd like to be able to access each data point above on its own (just pull out first name, for example), or as a group (retrieve a person's _full_ name)
+* you'd like to be able to run calculations and access a single student's homework grades (like average homework score)
 
-__How would I store this data in my program? What variable(s) and type(s) of variables would I use?__ &rarr;
+__How would we store this data in my program? What variable(s) and type(s) of variables would we use?__ &rarr;
 </section>
 
 <section markdown="block">
@@ -61,9 +61,9 @@ String[][] enrolledStudents = {
 <section markdown="block">
 ## Homework Scores
 
-Aaaand... their scores. We can't store mixed types in an Array (I sort of can, but it has its own set of problems). __Let's try it.__ &rarr;
+Aaaand... their scores. We can't store mixed types in an Array.
 
-So, we store the homework scores in a totally separate array (but we have to __maintain ordering__!).
+So, we store the homework scores in a totally separate array (but we have to __maintain ordering__!). __Let's try it.__ &rarr;
 
 <pre><code data-trim contenteditable>
 int[][] studentScores = {
@@ -79,17 +79,19 @@ int[][] studentScores = {
   {72, 81, 71, 69, 90, 61, 60, 51, 57, 93},
 };
 </code></pre>
+{:.fragment}
 </section>
 
 <section markdown="block">
 ## A Small Exercise
 
-So, maybe next school year, because you &heart; Java so much, you end up grading for my section of 101.
+So, maybe next school year, because you &hearts; Java so much, you end up grading for my section of 101.
 
-* you have to create a report that has
+__You have to create a report that has:__ &rarr;
+
 * every student's first and last name separated by a space
 * ...then a dash
-* and average homework score for that student 
+* and the average homework score for that student 
 
 </section>
 
@@ -181,6 +183,8 @@ __What are the two broad categories of types that we know?__ &rarr;
 <span class="fragment">__What are the reference type(s) that we know?__ &rarr;</span>
 
 * {:.fragment} Arrays (of various types!)
+* {:.fragment} Strings
+* {:.fragment} Scanner objects
 </section>
 
 <section markdown="block">
@@ -582,7 +586,7 @@ __Does anyone remember default values for various types are (if they're left una
 The default value for a reference type is __<code>null</code>__:
 
 * __null__ is a special Java value
-* it's is a literal, like <code>true</code> or <code>false</code>
+* it's a literal, like <code>true</code> or <code>false</code>
 
 </section>
 
@@ -605,8 +609,9 @@ public class Test {
         f.printAttributes();
     }
 }
+</code></pre>
 
-
+<pre><code data-trim contenteditable>
 // in Foo.java
 public class Foo {
     int x;
