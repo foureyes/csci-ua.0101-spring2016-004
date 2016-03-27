@@ -12,12 +12,12 @@
 {% endcomment %}
 </td>
 	<td markdown="block">
+Assignment, Due March 31st
+
+* Read Chapter #9 Classes/Objects 
+* [Homework #7](assignments/hw07.html)
+
 {% comment %}
-Assignments
-
-* Read Chapter #9 and #10 on Classes/Objects and Object Oriented Programming 
-* [Homework #8](assignments/hw08.html)
-
 Code Samples
 
 * [Circle](resources/code/class16/Circle.java)

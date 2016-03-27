@@ -22,7 +22,7 @@
 </td>
 	<td markdown="block">
 
-Assignment Due Feb 24th
+Assignment Due March 24th
 
 * [Homework #6](assignments/hw06.html)
 
