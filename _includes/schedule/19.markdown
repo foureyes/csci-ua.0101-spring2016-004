@@ -1,8 +1,10 @@
 	<td markdown="block">
-* [About Class #19](slides/19/meta.html)
+ 
 * [Object and Classes / Thinking in Objects](slides/19/oop-conclusion.html)
 
 {% comment %}
+* [About Class #19](slides/19/meta.html)
+
 * [Thinking in Objects / Class Relationships, Stacks](slides/19/thinking-oop.html)
 * [String Class, StringBuilder/StringBuffer](slides/19/strings.html)
 

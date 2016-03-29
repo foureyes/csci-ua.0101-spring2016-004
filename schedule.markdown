@@ -271,10 +271,7 @@ TODO:
 * these slides should come from old class 22, finishing up
 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/19.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 

@@ -1,4 +1,7 @@
 	<td markdown="block">
+* Midterm Reminder Again
+    * Topics
+* Questions About Homework
 * [Objects and Classes Continued](slides/17/oop-continued.html)
 {% comment %}
 * [About Class #17](slides/17/meta.html)
