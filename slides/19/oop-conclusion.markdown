@@ -238,11 +238,11 @@ Here's a class diagram for a simplified version of <code>Matrix</code>. A progra
 <section markdown="block">
 ## Class Contract 
 
-__Or, we can just list out the public methods and data fiels:__ &rarr;
+__Or, we can just list out the public methods and data fields:__ &rarr;
 
 <pre><code data-trim contenteditable>
 // constructor
-public Matrix(int arr)
+public Matrix(int[][] arr)
 
 // returns a string representation of the matrix
 public String toString()

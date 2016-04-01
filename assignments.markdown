@@ -13,8 +13,8 @@ nav-state: assignments
 * [Assignment #5](assignments/hw05.html)
 * [Assignment #6](assignments/hw06.html)
 * [Assignment #7](assignments/hw07.html)
-{% comment %}
 * [Assignment #8](assignments/hw08.html)
+{% comment %}
 * [Assignment #9](assignments/hw09.html)
 * [Assignment #10](assignments/hw10.html)
 * [Assignment #11](assignments/hw11.html)

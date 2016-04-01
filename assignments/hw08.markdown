@@ -2,11 +2,11 @@
 layout: homework
 title: "Assignment #8"
 ---
-# Assignment #8 - Due Friday, April 3rd at 11PM, No Grace Period
+# Assignment #8 - Due Friday, April 8th at 11PM 
 
 * [Readings](#readings)
-* [Matrix](#part2)
-* [One Player Pong](#part3)
+* [Library](#part2)
+* [RPN Calculator / Stack Class](#part3)
 
 <a name="readings"></a>
 
@@ -14,571 +14,452 @@ title: "Assignment #8"
 
 From your book, _{{site.book}}_ :
 
-* __Chapter #9__  on Objects and Classes
-* __Chapter #10__ on Object Oriented Thinking
+* read __Chapter 10__, Object Oriented Thinking ... 
+* Pay close attention to:
+	* 10.1 through 10.6 (object oriented design and example classes)
+	* 10.10 and 10.11 (on the String class and String Buffer / String Builder)
+* See the sample code on Arrays of objects:
+    * [Finding the cutest Cat object](http://www.pythontutor.com/visualize.html#code=//+In+this+example+we'll+see%3A%0A//+*+an+Array+of+objects%0A//+*+ordering+(that+is,+determining+which+object+is+greater/lesser)+objects%0A//+++based+on+a+property%0A%0Aimport+java.util.Random%3B%0A%0Apublic+class+Cat+%7B%0A%09//+A+class+that+represents+a+Cat%0A++++public+String+name%3B%0A++++public+int+cuteness%3B%0A++++%0A++++public+Cat(String+name,+int+cuteness)+%7B%0A++++++++this.name+%3D+name%3B%0A++++++++this.cuteness+%3D+cuteness%3B%0A++++%7D%0A++++%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A++++++++//+Let's+try+to+find+the+cutest+cat+among+these+3+cats%3A%0A++++%09%09Cat%5B%5D+cats+%3D+new+Cat%5B3%5D%3B%0A++++++++cats%5B0%5D+%3D+new+Cat(%22Bill+Furry%22,+2)%3B%0A++++++++cats%5B1%5D+%3D+new+Cat(%22Paw+Newman%22,+7)%3B%0A++++++++cats%5B2%5D+%3D+new+Cat(%22Kitty+Purry%22,+4)%3B%0A++++++++%0A++++++++//+Assume+that+the+first+one+is+the+cutest...%0A++++++++Cat+cutestCat+%3D+cats%5B0%5D%3B%0A++++++++%0A++++++++//+Loop+through+all+of+the+others,+and+%22point%22+cutestCat%0A++++++++//+to+the+cat+that+has+the+highest+cuteness+number%0A++++++++for(int+i+%3D+1%3B+i+%3C+cats.length%3B+i%2B%2B)+%7B%0A++++++++%09%0A++++++++%09%09//+Notice+that+we're+comparing+the+cuteness+data+field%0A++++++++%09%09if(cats%5Bi%5D.cuteness+%3E+cutestCat.cuteness)+%7B%0A++++++++%09%09%09cutestCat+%3D+cats%5Bi%5D%3B%0A++++++++%09%09%7D%0A++++++++%7D%0A++++++++System.out.printf(%22The+cutest+cat+is%3A+%25s,+%25s%22,+%0A++++++++%09%09cutestCat.name,+cutestCat.cuteness)%3B%0A++++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=true&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0)
+* Review sorting algorithms
+	* __selection sort__ from Chapter 7
+	* alternatively, you can check out [bubble sort](http://en.wikipedia.org/wiki/Bubble_sort) 
+	
+Lastly, check out [this sample of storing objects in an Array and swapping objects in Pythontutor's Java mode](http://www.pythontutor.com/visualize.html#code=public+class+Foo+%7B%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A++++++++Foo%5B%5D+arr+%3D+new+Foo%5B3%5D%3B%0A++++++++for(int+i+%3D+0%3B+i+%3C+arr.length%3B+i%2B%2B)+%7B%0A++++++++++++arr%5Bi%5D+%3D+new+Foo(i)%3B%0A++++++++%7D%0A++++++++Foo+temp+%3D+arr%5B0%5D%3B%0A++++++++arr%5B0%5D+%3D+arr%5Barr.length+-+1%5D%3B%0A++++++++arr%5Barr.length+-+1%5D+%3D+temp%3B%0A++++%7D%0A++++%0A++++public+int+id%3B%0A++++public+Foo(int+id)+%7B%0A++++++++this.id+%3D+id%3B%0A++++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=true&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=31)
 
 
 <a name="part2"></a>
 
-## (25 points) Part 2 - Matrix
+## (30 points) Part 2 - Library
 
-<pre><code data-trim contenteditable> _            _
-|  9  2  3  4  |
-|  6  1  8  2  |
-|  5  3  4  1  |
-|  4  9  0  2  |
-|_ 2  8  4  2 _|
+<pre><code data-trim contenteditable>                            .-._             .----.     .--.    
+                    .--.____| | |___ .---.___|''''|_____|  |___ 
+                    |--|XXXX| |D|---||---|=+=|''''|-~+~-|  |---|
+                    |19|    | |U|   ||\ /| ^ |    |FrnkN|**| - |
+                    |84|    | |N|   || X |=^=|    |-~+~-|**| - |
+                    |--|    | |E|===||/ \| ^ |''''|Stein|  | - |
+                    |  |XXXX| | |---||---|=+=|''''|-~+~-|  |---|
+                    `--^----'-^-^---''---^---^----^-----^--^---^
 </code></pre>
+{% comment %}_ {% endcomment %}
 
-### Matrix
+### Library
 
 #### Overview
 
-Create a Matrix class and a another class to test your Matrix class functionality.
+Create a program that allows you to manage a library (collection) of books. It should support:
+
+* displaying all of the books in the library
+* finding the first book with an author matching a last name provided
+* getting a random book
+* adding books
+* loading _hardcoded_ books into the library (mainly for testing)
+* sorting the books by author's last name or title
+
+This should be implemented using 4 classes, one of which serves as the class that contains the <code>main</code> method.
+
+* the classes consist of:
+	* Library
+	* Book
+	* Person
+* the classes should:
+	*  model the real world entities that they're named after
+	* and their design should reflect their data, actions and relationships with one another
 
 #### Setup
 
-* Create two class (<code>.java</code>) files: <code>Matrix.java</code> and <code>MatrixTest.java</code>
-* (These can be within a project that contains the other parts of this homework or it can be in separate project on its own)
-
-#### Matrix.java
-
-Implement the following constructors and methods. Note that your Matrix class will store an internal representation of itself as a 2 dimensional int Array (that is, you should have a member variable / data field that contains an Array of int Arrays... representing all of the elements in the Matrix).
-
-__Reuse code where possible__ (for example, you can use your version of <code>generateRandomElements</code> for the default constructor below)
-
-<pre><code data-trim contenteditable>
-/**
- * Default constructor - initializes this matrix with 10 rows and 10
- * columns, each with a random number from 0 to 10 inclusive.
- */
-public Matrix() 
-
-/**
- * Initializes a matrix with number rows, rows and number columns, cols
- * The default value for int[]'s are left as is (0's)
- * Matrix myMatrix = new Matrix(2, 2)
- * // [ 0, 0 ]
- * // [ 0, 0 ]
- * 
- * @param rows - number of rows
- * @param cols - number of columns
- */
-public Matrix(int rows, int cols) 
-
-/**
- * Initializes a matrix with the provided 2-dimensional Array. 
- * int[][] a = {
- *   {1, 2}, 
- *   {3, 4}
- * }
- * Matrix myMatrix = new Matrix(a)
- * // [ 1, 2 ]
- * // [ 3, 4 ]
- * 
- * @param arr - two dimensional Array of ints that represents this matrix
- */	
-public Matrix(int[][] arr) 
-
-/**
- * Initializes a matrix with number rows, rows and number columns, cols
- * The default value is set to the supplied fillNumber
- * Matrix myMatrix = new Matrix(2, 3, 42)
- * // [ 42, 42, 42 ]
- * // [ 42, 42, 42 ]
- * 
- * @param rows - number of rows
- * @param cols - number of columns
- * @param fillNumber - the number to set all elements of this matrix to
- */	
-public Matrix(int rows, int cols, int fillNumber) 
-
-/**
- * Sets all of the values of this matrix to the number supplied.
- * myMatrix.fill(42)
- * // [ 42, 42 ]
- * // [ 42, 42 ]
- * 
- * @param n - the number to fill the matrix with
- */
-public void fill(int n) 
-
-/**
- * Generate random values for this matrix. Replace the current values
- * and dimensions of the matrix if they already exist... with the values
- * specified.
- * myMatrix.generateRandomElements(2, 2, -5, 5)
- * // [ -2, -5 ]
- * // [  4,  2 ]
- * 
- * @param rows - the number of rows of this matrix
- * @param cols - the number of columns of this matrix
- * @param min - the minimum possible value (inclusive) of each element
- * @param max - the maximum possible value (inclusive) of each element
- */
-public void generateRandomElements(int rows, int cols, int min, int max)
-
-/**
- * Retrieves the max integer from this matrix
- * // myMatrix = ...
- * // [ -7, -5, -8 ]
- * // [ -3, -9, -2 ]
- * myMatrix.getMaxInt() // --> -2
- * 
- * @return the largest integer in this matrix
- */
-public int getMaxInt() 
-
-/**
- * Retrieves the min integer from this matrix
- * // myMatrix = ...
- * // [ -7,  5,  8 ]
- * // [  3,  9,  2 ]
- * myMatrix.getMinInt() // --> -7
- * 
- * @return the smallest integer in this matrix
- */
-public int getMinInt() 
-
-/**
- * Gives back the number of columns in this matrix
- * // myMatrix = ...
- * // [ 7, 5, 8 ]
- * // [ 3, 9, 2 ]
- * myMatrix.getNumCols() // --> 3
- * 
- * @return the number of columns in this matrix
- */
-public int getNumCols() 
-
-/**
- * Gives back the number of rows in this matrix
- * // myMatrix = ...
- * // [ 7, 5, 8 ]
- * // [ 3, 9, 2 ]
- * myMatrix.getNumRows() // --> 2
- * 
- * @return the number of rows in this matrix
- */	
-public int getNumRows() 
-
-/**
- * Gives back the element at the row and column specified
- * // myMatrix = ...
- * // [ 7, 5, 8 ]
- * // [ 3, 9, 2 ]
- * myMatrix.getElement(0, 1) // --> 5
- * 
- * @row the row number of the element to retrieve
- * @col the col number of the element to retrieve
- * @return the number of rows in this matrix
- */		
-public int getElement(int row, int col) 
-
-
-/**
- * Generates a string representation of this matrix. For example:
- * [ -20,   1,  12 ]
- * [   8,  -4,   9 ] 
- * Each column is aligned to the right, and is padded with spaces
- * where necessary. Each row is enclosed in square brackets and
- * separated by new lines.
- * @return a string representation of this matrix
- */
-public String toString() 
-
-/**
- * Transforms this matrix's rows to columns and columns to rows. For
- * example:
- * [   4,   1,  -2 ]
- * [ 395,   7,   4 ]
- * 
- * transposed... is:
- * [   4,  395 ]
- * [   1,    7 ]
- * [  -2,    4 ]
- */
-public void transpose() 
-
-/**
- * Reverses all of the rows in this matrix. For example:
- * [   4,   1,  -2 ]
- * [ 395,   7,   4 ]
- * 
- * flipped horizontally is:
- * 
- * [  -2,    1,     4 ]
- * [   4,    7,   395 ]
- */	
-public void horizontalFlip() 
-
-/**
- * Reverses all of the columns in this matrix. For example:
- * [   4,   1,  -2 ]
- * [ 395,   7,   4 ]
- * 
- * flipped vertically is:
- * 
- * [ 395,   7,   4 ]
- * [   4,   1,  -2 ]
- */	
-public void verticalFlip() 
-
-/**
- * Adds the provided matrix to this matrix. For example:
- * Matrix m1 = new Matrix(2, 2, 2);
- * // [2, 2]
- * // [2, 2]
- * Matrix m2 = new Matrix(2, 2, 5);
- * // [5, 5]
- * // [5, 5]
- * boolean result = m2.add(m1);
- * System.out.println(m2.toString());
- * // [7, 7]
- * // [7, 7]
- * System.out.println(result);
- * // true
- * 
- * @m the matrix to be added
- * @return true if the matrix provided can be added to this matrix
- * ... false otherwise
- */		
-public boolean add(Matrix m)
-
-/**
- * Multiplies this matrix by the number provided. For example:
- * Matrix m = new Matrix(2, 2, 2);
- * // [2, 2]
- * // [2, 2]
- * 
- * m.multiply(2);
- * System.out.println(m.toString());
- * // [4, 4]
- * // [4, 4]
- * 
- * @param n - the number to multiply this matrix by
- */
-public void multiply(int n)
-</code></pre>
-
-#### MatrixTest.java
-
-Use the class you created above in this file. Create a main method. In your main method:
-
-<pre><code data-trim contenteditable>
-
-// Creat the following 2-dimensional Array of ints:
-int[][] m = {
-    {4, 1, -2, 129},
-    {395, 7, 4, 0},
-    {5, -100, 8, 55}
-};
-
-// Create a matrix called matrix1... and construct it using the Array of ints 
-// from above.
-
-// Print out matrix1.
-
-// Make another new matrix called matrix2, but use the no arg constructor 
-// (this should generate a 10x10 matrix with random elements).
-
-// Print out matrix2.
-
-// Now... using the same matrix, matrix2, reset it to a 5x5 matrix with 
-// values ranging from -100 to 100. Use the method that generates random 
-// elements.
-
-// Print out matrix2 again.
-
-// Now... let's work with matrix1 again...
-// Get the number of rows from matrix1 and print it out.
-
-// Get the number of columns from matrix1 and print it out.
-
-// Get the max int from matrix1 and print it out.
-
-// Get the min int columns from matrix1 and print it out.
-
-// Transpose matrix1 and print it out.
-
-// Flip matrix1 horizontally and print it out.
-
-// Flip matrix1 vertically and print it out.
-
-// Create a matrix called matrix3. It should have the same dimensions as 
-// matrix1... and it should be filled with 1's
-
-// Using matrix1, ... call add on it by passing in matrix3 as the matrix to add.
-
-// Print out matrix1 again.
-
-// Multiply matrix1 by the number 2... and print out matrix.
-</code></pre>
-
-
-<a name="part3"></a>
-
-## (25 points) Part 3 - Pong!
-
-
-<pre><code data-trim contenteditable>                                                                                             /
-                                                                                         __   /                        
-                                                                                        /  \
-                                                                                        \__/                         
-                                                                   
-
-
-
-
-
-    ____________               +-----------------+
-__________                     |                 |
-     ___________               +-----------------+
-</code></pre>
-{%comment%}_ {%endcomment%}
-
-### Pong
-
-#### Overview
-
-Implement a one-player Pong game.
-
-#### Setup
-
-* Create 3 class (<code>.java</code>) files called <code>Pong.java</code>, <code>Bar</code>, and <code>Ball.java</code>
-* (This can be within a project that contains the other parts of this homework or it can be in separate project on its own)
+* Create four class (<code>.java</code>) files: 
+	* <code>MyLibrary.java</code>: a class that contains the entry point into your program, the <code>main</code> method
+	* <code>Library.java</code>: a class representing a collection of books
+	* <code>Book.java</code>: a class representing a book
+	* <code>Person.java</code>: a class representing a person (can be used for author)
+* These classes should all be in the same project (and package), so that they have access to each other
 
 #### Features
 
+__General Requirements__
 
-* create a <code>Ball</code> class
-	* member variables
-		* <code>x</code> - the ball's x position
-		* <code>y</code> - the ball's y position
-		* <code>vx</code> - the ball's horizontal velocity (added to position each time the ball moves)
-		* <code>vy</code> - the ball's vertical velocity (added to position each time the ball moves)
-		* <code>boardWidth</code> - the width of the window that the ball is in
-		* <code>boardHeight</code> - the heigth of the window that the ball is in
-		* <code>diameter</code> - the diameter of the ball
-	* methods and constructors
-		* a single constructor that populates all of the member variables with arguments passed in
-		* a move method that has no parameters:
-			* adds the velocity to the ball's x and y position
-			* if the result of moving the ball places it off screen horizontally
-				* flip the sign of its x velocity
-				* reposition the ball so that it is still on screen 
-				* remember to take the ball's diameter into account
-			* if the result of moving the ball places it above the screen
-				* flip the sign of its y velocity
-				* reposition the ball so that it is still on screen 
-				* remember to take the ball's diameter into account
-			* if the result of moving the ball places it below the screen... allow it to disappear
-* create a <code>Bar</code> class
-	* the bar (or paddle) will continuously move until the user flips the velocity
-	* member variables
-		* <code>x</code> - the bar's x position
-		* <code>y</code> - the bar's y position
-		* <code>vx</code> - the bar's x velocity
-		* <code>barWidth</code> - the width of the bar
-		* <code>barHeight</code> - the height of the bar
-		* <code>boardWidth</code> - the width of the window that the bar is in
-	* methods
-		* a move method that has no parameters:
-			* adds the velocity to the bar's x position
-			* checks the left and right bounds based on the boardWidth
-			* if the bar goes beyond the left or right bounds: 
-				* set the position to the farthest left or right it can go
-				* (consequently, preventing it from moving beyond the left and right boundaries)
-		* a goLeft method that has no parameters:
-			* adjusts the x velocity so that the bar is moving to the left (negative)
-		* a goRight method that has no parameters:
-			* adjusts the x velocity so that the bar is moving to the right (negative)
-* create a Pong class that uses that Ball and Bar classes to create a pong game; use the code below, and fill in the areas marked __TODO__:
+* create the following 4 classes
+	* <code>MyLibrary</code>: should contain your <code>main</code> method, and it should be responsible for all user interaction
+	* <code>Library</code>: should contain variables and methods related to the management of the collection of books
+	* <code>Book.java</code>: a class representing a book
+	* <code>Person.java</code>: a class representing a person (author)
+* try to make the majority of your data fields private, and use getter and setter methods to access them
+* __you must decide what classes should containt data fields and methods__ based on the requirements and example output below
+	* for example, perhaps the <code>Person</code> class should have a first name field as well as a last name field
+	* maybe the <code>Book</code> class should have an author... and a method that tests if a book is by a certain author would be useful
+	* note, however, that you have total freedom with the design, __but you will be graded__ on __encapsulation__ and __keeping related data and actions together__
+* note that you will most likely need to maintain an <code>Array</code> of <code>Book</code> objects
+	* this <code>Array</code> of <code>Book</code> objects can be added to
+	* however, recall that <code>Array</code>s cannot change size
+	* so... build your Array with a fixed capacity
+	* __the initial capacity should be 8 books (let's keep the library small!)__
+	* if a book is added and it goes beyond the capacity, do not add the book
+* __do not use any nested / multi-dimensional Arrays__ in your program (instead, use objects made from the classes you build)
+* it's ok to make the following __assumptions regarding your design__:
+	* there's only one author per book
+	* author's names are only first and last (and that the user will input the name as first name, followed by a space, followed by a last name)
+	* inputs (book titles, author names, etc.) do not have new lines in them
+* don't worry about doing any user input validation... for example:
+	* assume that the user will always enter a valid command
+	* assume that the user will enter a name as first and last separated by a space
 
-<pre><code data-trim contenteditable>
-import processing.core.PApplet;
+__Program Startup and End__
+
+* when your program starts:
+* print out "Welcome to [Library Name]" (every library should have a name)
+* then print out the current date and time using an object created from Java's  <code>java.util.Date</code> class
+* after printing out the above info, go into a loop that continually asks the user for a command:
+	* <code>(d)isplay all books<code>
+	* <code>(f)ind books by author<code>
+	* <code>get (r)andom book<code>
+	* <code>(a)dd book</code>
+	* <code>(l)oad data</code> 
+	* <code>(s)ort books</code>
+	* <code>(q)uit</code>
+* typing (q) stops the loop, and the program should end
+* the program should print out <code>Bye</code> when the user quits
+* __hint:__ always use [Scanner object].nextInput to get all input up to a new line
 
 
-public class Pong extends PApplet{
-	
-	final int WIDTH = 400, HEIGHT = 400;
-		
-	/**
-	 * The background color of the window
-	 */
-	final int BACKGROUND_COLOR = 0;
-	
-	/**
-	 * The diameter of the ball
-	 */
-	final int BALL_DIAMETER = 20;
-	
-	/**
-	 * The paddle's x velocity
-	 */
-	final int PADDLE_VX = 3;
-	
-	/**
-	 * The paddle's width
-	 */
-	final int PADDLE_WIDTH = 75;
-	
-	/**
-	 * The paddle's height
-	 */	
-	final int PADDLE_HEIGHT = 15;
+__Display All Books__
 
-	/**
-	 * The ball's max velocity
-	 */	
-	final int MAX_VELOCITY = 5;
-	
-	/**
-	 * The ball's min velocity
-	 */		
-	final int MIN_VELOCITY = 2;	
-	
-	/**
-	 * The ball instance representing the game's ball
-	 */
-	Ball ball;
-	
-	/**
-	 * The Bar instance that represents the game's paddle
-	 */
-	Bar paddle;
-	
-    /**
-     * Allow processing to be run as application rather than just applet
-     */
-    public static void main(String[] args) {
-        PApplet.main("Pong");
-    }
-                    
-    /**
-     * Sets height and width of sketch, initalizes game.
-     */
-	public void setup() {
-		size(WIDTH, HEIGHT);
-		noStroke();
-		reset();
-	}
-	
-    /**
-     * "Main" draw method... controls animation, clears screen, draws
-     * elements and checks for collision.
-     */
-	public void draw() {
-		background(BACKGROUND_COLOR);
-		
-		// TODO: use the ball and paddle's move methods to move them to their
-		// next location
-	
-		// check if there's a collision... if there is, bounce the ball
-		// in the opposite direction
-		if (intersects(ball, paddle)) {
-			ball.vy *= -1;
-			ball.y = paddle.y - ball.diameter / 2 - 1;
-		}
-		
-		// TODO: draw an ellipse and a rectangle using the ball and 
-		// paddle's member variables (the ball's x, y, and diameter
-		// values... and the paddle's x, y, barWidth, and barHeight
-		// values)
-		// ellipse(...);
-		// rect(...);
-	}
-	
-    /**
-     * Reacts to left, right and (r)eset keys. Left and right change
-     * the direction of the paddle.
-     */
-	public void keyPressed() {
-		if(keyCode == LEFT) {
-			// TODO: tell the paddle to move left
+* typing the command, <code>d</code>, will display all books in the library
+* when the program begins, there are no books in the library
+* books can be added by using:
+	* <code>l</code> to load books that have been _hardcoded_ into the program
+	* <code>a</code> to add one book at a time
+* displaying the books prints out every book in the library in the following format:
+	* <code>[title] by [author last name], [author first name]</code>
+	* for example <code>The Hunger Games by Collins, Susan</code>
 
-		} else if(keyCode == RIGHT) {
-			// TODO: tell the paddle to move right
+__Find Books by Author__
 
-		}
-		
-		if(key == 'r') {
-			reset();
-		}
-	}
-	
-	/**
-	 * brings the ball back to the center of the screen, with a
-	 * random velocity for x and y... and add the paddle to the
-	 * center bottom of the window, with an initial velocity
-	 * going right
-	 */
-	public void reset() {
-		// TODO: implement a reset method to start the ball somewhere
-		// in the window with a random velocity for x and y and start
-		// the paddle in the center bottom of the window with an 
-		// initial velocity going right
-		
-		// 1. do this by assigning a new Ball object to the ball variable
-		//    and a new Bar object to the paddle variable
-		// 2. use as many of the constants defined above as you can as
-		//    arguments to the Ball and Bar constructors....
-		//    a. for example, generate a random velocity based on the
-		//       MIN_VELOCITY and MAX_VELOCITY constants
-		//    b. initialize the paddle's velocity with PADDLE_VX, and
-		//       its dimensions with PADDLE_WIDTH and PADDLE_HEIGHT
-	}
-	
-	
-	/* *
-	 * tests if the ball intersects with the paddle
-	 * @param b the ball
-	 * @param p the paddle
-	 * @return true if the ball and paddle intersect
-	 */
-	boolean intersects(Ball b, Bar p) {
-		// TODO: determine if the ball intersects the paddle. Here's
-		// a solution that works for most cases (it doesn't quite work
-		// if the ball and paddle collide on the left or right most edge)
-		// 1. determine the point closest to the circle that's in the paddle:
-		//    a. the x coordinate is going to be the paddle's
-		//       left x coordinate if the ball is to the paddle's left
-		//    b. the x coordinate is going to be the paddle's
-		//       right x coordinate if the ball is to the paddle's right
-		//    c. the x coordinate is going to be the ball's own x coordinate
-		//       if the ball is between the left and right most x value
-		//       of the paddle
-		// 2. once you have the closest point in the paddle... determine
-		//    its distance from the ball's center
-		// 3. if this distance is less than the radius, then we have an 
-		//    intersection!
-	}
-	
-	/* *
-	 * generates a random integer from a, up to but not including b
-	 * @param a the start number
-	 * @param b goes up to, but does not include this number
-	 * @return a random integer from a to b
-	 */
-	private int randInt(int a, int b) {
-		return (int) (Math.random() * (b - a) + a);
-	}
-	
-	/* *
-	 * generates a 1 or -1
-	 * @return either 1 or -1
-	 */
-	private int randSign() {
-		// TODO: Implement a short method to generate either a 1 or a -1
-	}
-}
+* typing in the command, <code>f</code>, will:
+	* ask the user for an author's last name
+	* retrieve the first occurrence of a book based on the author's last name entered
+	* if there's more than one book by that author, then the first one found (in whatever order the books are in) will be given back
+	* if there's a book found, print out its title and author using the same format as display all books: <code>[title] by [author last name], [author first name]</code>
+	* if no book is found, then print out <code>Book not found</code>
+* __hint__: if you'd like to have a <code>Book</code> object passed back rather than a <code>String</code> you can set an object to <code>null</code> as a default value
+	* if a book is not found, then just return <code>null</code>
+	* you can check if a value is <code>null</code> by <code>variableName == null</code>
+* __hint__: note that since you can search by author's last name, then the implication is that an author's name must be broken up into first and last name, rather than having a single <code>String</code> represent the entire author's name
 
+__Get Random Book__
+
+* typing in the command, <code>r</code>, will retrieve a random book and print out its title and other in the format: <code>[title] by [author last name], [author first name]</code>
+* __you must use__ a <code>Random</code> object created from the <code>java.util.Random</code> class in order to retrieve a random book
+
+__Add a Book__
+
+* typing in the command, <code>a</code>, will ask the user for:
+	* a book title
+	* an author name (the author's name should be in the format, <code>[first name] [last name]</code>
+	* assume that both the book and author name are formatted appropriately - no need to validate the user's input
+	* (remember to use <code>nextLine</code> on your <code>Scanner</code> object)
+	* __hint__: __to break up a string, use the <code>split</code> method__ described in the 2nd to last section of the book, 10.10, on the <code>String</code> class
+* it's ok to have duplicate books
+* again, as stated above, your list of books will have a fixed capacity (since <code>Arrays</code> cannot change in size)
+	* if a book is added and it goes beyond the capacity, do not add the book
+	* display a message that says <code>"Cannot add a book"</code>
+	* __the initial capacity should be 8 books (let's keep the library small!)__
+
+__Load Data__
+
+* to facilitate testing, typing in the command, <code>l</code>, will load hardcoded books into the library:
+	
+<pre><code data-trim contenteditable>Frankenstein by Shelley, Mary
+Cryptonomicon by Stephenson, Neal
+The Hunger Games by Collins, Susan
+Neuromancer by Gibson, William
+Snow Crash by Stephenson, Neal
 </code></pre>
 
+* add the books in the order above
+* __if you would like to load your own books, make sure you load 5 books... and the titles and authors are not in alphabetical order__
+* you can do this in any way you like (manually creating each object and adding the book... or using some sort of <code>Array</code> to seed the library with content)
+* only add up to the capacity of the library (do not allow an error to occur, do not expand the library's capacity)
+* it's ok to have duplicate books
 
+__Sort Books__
+
+* typing in the command <code>s</code> will ask the user for a sort order
+	* <code>a</code> will sort the books by author
+	* <code>t</code> or any other input will sort the books in your library based on title
+* __hint__: use <code>compareTo</code> to determine if one title or author goes before another (see section 4.4 or 10.10 on <code>String</code> methods)
+* to sort objects, use __selection sort__, which we learned from chapter 7 on Arrays
+	* alternatively, you can use [bubble sort](http://en.wikipedia.org/wiki/Bubble_sort) 
+	* you'll likely have to swap objects
+	* for an example of swapping, [see an example on Python tutor's Java mode](http://www.pythontutor.com/visualize.html#code=public+class+Foo+%7B%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A++++++++Foo%5B%5D+arr+%3D+new+Foo%5B3%5D%3B%0A++++++++for(int+i+%3D+0%3B+i+%3C+arr.length%3B+i%2B%2B)+%7B%0A++++++++++++arr%5Bi%5D+%3D+new+Foo(i)%3B%0A++++++++%7D%0A++++++++Foo+temp+%3D+arr%5B0%5D%3B%0A++++++++arr%5B0%5D+%3D+arr%5Barr.length+-+1%5D%3B%0A++++++++arr%5Barr.length+-+1%5D+%3D+temp%3B%0A++++%7D%0A++++%0A++++public+int+id%3B%0A++++public+Foo(int+id)+%7B%0A++++++++this.id+%3D+id%3B%0A++++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=true&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=31)
+    * ... and to see how to deal with object in an Array, [see this example in Python tutor's Java mode](http://www.pythontutor.com/visualize.html#code=//+In+this+example+we'll+see%3A%0A//+*+an+Array+of+objects%0A//+*+ordering+(that+is,+determining+which+object+is+greater/lesser)+objects%0A//+++based+on+a+property%0A%0Aimport+java.util.Random%3B%0A%0Apublic+class+Cat+%7B%0A%09//+A+class+that+represents+a+Cat%0A++++public+String+name%3B%0A++++public+int+cuteness%3B%0A++++%0A++++public+Cat(String+name,+int+cuteness)+%7B%0A++++++++this.name+%3D+name%3B%0A++++++++this.cuteness+%3D+cuteness%3B%0A++++%7D%0A++++%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A++++++++//+Let's+try+to+find+the+cutest+cat+among+these+3+cats%3A%0A++++%09%09Cat%5B%5D+cats+%3D+new+Cat%5B3%5D%3B%0A++++++++cats%5B0%5D+%3D+new+Cat(%22Bill+Furry%22,+2)%3B%0A++++++++cats%5B1%5D+%3D+new+Cat(%22Paw+Newman%22,+7)%3B%0A++++++++cats%5B2%5D+%3D+new+Cat(%22Kitty+Purry%22,+4)%3B%0A++++++++%0A++++++++//+Assume+that+the+first+one+is+the+cutest...%0A++++++++Cat+cutestCat+%3D+cats%5B0%5D%3B%0A++++++++%0A++++++++//+Loop+through+all+of+the+others,+and+%22point%22+cutestCat%0A++++++++//+to+the+cat+that+has+the+highest+cuteness+number%0A++++++++for(int+i+%3D+1%3B+i+%3C+cats.length%3B+i%2B%2B)+%7B%0A++++++++%09%0A++++++++%09%09//+Notice+that+we're+comparing+the+cuteness+data+field%0A++++++++%09%09if(cats%5Bi%5D.cuteness+%3E+cutestCat.cuteness)+%7B%0A++++++++%09%09%09cutestCat+%3D+cats%5Bi%5D%3B%0A++++++++%09%09%7D%0A++++++++%7D%0A++++++++System.out.printf(%22The+cutest+cat+is%3A+%25s,+%25s%22,+%0A++++++++%09%09cutestCat.name,+cutestCat.cuteness)%3B%0A++++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=true&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0)
+#### Example Output
+
+<br>
+
+__Initial start of program shows library's name, and the current date and time.__ 
+
+<pre><code data-trim contenteditable>Welcome to: Joe's Library o' Science Fiction
+Today is Sun Apr 05 18:08:41 EDT 2015
+</code></pre>
+
+<br>
+
+__Load hardcoded book data, and display all of the books in the library (title and author name).__ &rarr;
+
+<pre><code data-trim contenteditable>(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> l
+5 books loaded
+(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> d
+Frankenstein by Shelley, Mary
+Cryptonomicon by Stephenson, Neal
+The Hunger Games by Collins, Susan
+Neuromancer by Gibson, William
+Snow Crash by Stephenson, Neal
+</code></pre>
+<br>
+
+__Find the first book in the library by author's last name; 1st example shows a book found (and shows that book's title and author)... while the second example shows that no books were found with the provided last name.__  &rarr;
+
+<pre><code data-trim contenteditable>(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> f
+Enter an author's last name
+> Stephenson
+Found Cryptonomicon by Stephenson, Neal
+(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> f
+Enter an author's last name
+> Clarke
+Book not found.
+</code></pre>
+
+<br>
+
+__Get a random book.__ &rarr;
+<pre><code data-trim contenteditable>(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> r
+Frankenstein by Shelley, Mary
+</code></pre>
+
+<br>
+
+__Add a book. Provide both a title and author. After displaying again, new book should be at end of books in library.__  &rarr;
+
+<pre><code data-trim contenteditable>(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> a
+Please enter the book's title:
+> Dune
+Please enter the book's author (firstName lastName):
+> Frank Herbert
+Added:
+Dune by Herbert, Frank
+(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> d
+Frankenstein by Shelley, Mary
+Cryptonomicon by Stephenson, Neal
+The Hunger Games by Collins, Susan
+Neuromancer by Gibson, William
+Snow Crash by Stephenson, Neal
+Dune by Herbert, Frank
+</code></pre>
+
+<br>
+
+__Attempting to add a book when the library's capcity (should be 8) is reached... results in a message: "_Cannot add book_"__ &rarr;
+
+<pre><code data-trim contenteditable>
+(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> d
+Frankenstein by Shelley, Mary
+Cryptonomicon by Stephenson, Neal
+The Hunger Games by Collins, Susan
+Neuromancer by Gibson, William
+Snow Crash by Stephenson, Neal
+Dune by Herbert, Frank
+Dispossessed by LeGuin, Ursula
+Ender's Game by Card, Orson
+(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> a
+Please enter the book's title:
+> 1984
+Please enter the book's author (firstName lastName):
+> George Orwell
+Cannot add book
+</code></pre>
+
+<br>
+
+__Sort books by author's last name, then display newly sorted list of books.__  &rarr;
+
+<pre><code data-trim contenteditable>(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> s
+Sort by (a)uthor or by (t)itle (default is title):
+> a
+Sorted by author
+(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> d
+The Hunger Games by Collins, Susan
+Neuromancer by Gibson, William
+Dune by Herbert, Frank
+Frankenstein by Shelley, Mary
+Snow Crash by Stephenson, Neal
+Cryptonomicon by Stephenson, Neal
+</code></pre>
+
+<br>
+
+__Sort books again, but this time by title (the default sort order if author isn't explicitly set as sort by)... display the books afterwards.__ &rarr;
+<pre><code data-trim contenteditable>(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> s
+Sort by (a)uthor or by (t)itle (default is title):
+> t
+Sorted by title
+(d)isplay all books, (f)ind books by author, get (r)andom book, (a)dd book, (l)oad data, (s)ort books or (q)uit
+> d
+Cryptonomicon by Stephenson, Neal
+Dune by Herbert, Frank
+Frankenstein by Shelley, Mary
+Neuromancer by Gibson, William
+Snow Crash by Stephenson, Neal
+The Hunger Games by Collins, Susan
+</code></pre>
+
+<a name="part3"></a>
+
+## (20 points) Part 3 - RPN Calculator
+
+
+<pre><code data-trim contenteditable>   ____________________
+ /____________________/|
+|  _________________  ||
+| |       2 8 + 5 * | ||
+| |_________________| ||
+|  __ __ __ __ __ __  ||
+| |__|__|__|__|__|__| ||
+|  ___ ___ ___   ___  ||
+| |_7_|_8_|_9_| |_+_| ||
+| |_4_|_5_|_6_| |_-_| ||
+| |_1_|_2_|_3_| |_x_| ||
+| |_._|_0_|_=_| |_/_| ||
+|_____________________|/
+</code></pre>
+{%comment%}_ {%endcomment%}
+
+### RPN Calculator
+
+#### Overview
+
+Create a program that evaluates a [reverse polish notation (postfix) mathematical expression](http://en.wikipedia.org/wiki/Reverse_Polish_notation).
+
+#### Setup
+
+* Create 2 class (<code>.java</code>) files: 
+	* <code>StackOfDoubles.java</code>: a class representing a stack
+	* <code>RPNCalculator.java</code>: your entry point to your program; it should contain <code>main</code>
+* These should be in the same project
+
+#### Features
+
+* create a class that represents a [data structure called a stack](http://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29)
+	* a stack allows you to store elements by _pushing_ items on to the stack of elements
+	* ... and retrieve and remove items by _popping_ them off of the top of the stack
+	* __See section 10.6 for a sample implementation of a stack of ints__
+	* create your own stack class, but instead of ints, store doubles
+	* it should have mostly the same methods as what's in the book... (there's one additional method, <code>toString</code>)
+	* your <code>StackOfDoubles</code> class should support:
+		* <code>toString()</code> &rarr; returns a <code>String</code> representation of the stack
+		* <code>empty()</code> &rarr; returns a <code>boolean</code> that describes whether or not the stack is empty
+		* <code>peek()</code> &rarr; returns a <code>double</code>... allows you to view the double at the top of the stack without removing it
+		* <code>push(double num)</code> &rarr; does not return a value... however, adds a <code>double</code> to the top of the stack
+		* <code>pop()</code> &rarr; removes the top element (that is, the most recently added) element from the top of the stack... and returns it as a <code>double</code>
+* <code>toString()</code> should return a <code>String</code> representation of your stack (that is, it should _return_ a <code>String</code>)
+	* however, do not just concatenate Strings using <code>+</code>
+	* instead, __use <code>StringBuilder</code> or <code>StringBuffer</code> (both in section 10.11) to construct your String in your <code>toString()</code> method__
+* __do not use <code>Arrays.toString()</code>__
+* the toString representation should be:
+	* <code>[element1] [element2] [element3]</code>
+	* <code>3.0 2.0 74.0</code>
+* your <code>RPNCalculator</code> class should have a <code>main</code> method
+* this method should collect a mathematical expression in Reverse Polish Notation (RPN) from the user
+	* __the entire expression is entered as single input__
+	* it will consist of integers and operators, <code>+, -, *, /, ^</code> {% comment %}* {% endcomment %}
+	* ...each part of the expression will be separated by a space
+	* __hint__: use <code>nextLine</code> to get the entirety of the expression
+	* __hint__: it should break up the expression into individual parts by using the <code>String</code>'s <code>split</code> method
+* once you've extracted the individual parts from the input, evaluate the RPN expression
+* Reverse Polish Notation (or postfix) works in the following way:
+	* the operator of an operation appears immediately after its operands
+	* for example <code>3 4 +</code> is the same as <code>3 + 4</code>
+	* when reading RPN, once you see an operator, immediately evaluate it using the preceding values as operators
+	* as a result, this notation doesn't require parentheses
+	* for example: <code>3 4 + 5 *</code> could be translated to <code>(3 + 4) * 5</code> {% comment %}* {% endcomment %}
+	* another example: <code>2 3 64 8 / + 7 - ^</code> could be translated to <code>2 ^ ((3 + 64 / 8) - 7)</code>
+	* [you can read more about RPN on wikipedia](http://en.wikipedia.org/wiki/Reverse_Polish_notation)
+* the algorithm for evaluating an RPN expression is as follows:
+
+<pre><code data-trim contenteditable>for token in expression
+  if token is numeric
+    push token on stack
+  else if token is an operator
+    pop the number of operands that operator takes off of the stack
+	apply the operation on the operands
+	push the new value on to the stack
+if there's only one value left in the stack
+  use that as the result of the calculation
+</code></pre>
+
+* here is a sample run using the expression <code>23 7 + 2 *</code>:
+
+<pre><code data-trim contenteditable>token: '23', 23 is pushed on to the stack, stack = 23.0 
+token: '7', 7 is pushed on to the stack, stack = 23.0 7.0 
+token: '+', + pops 23 and 7, adds them and pushes 30.0 on to the stack, stack = 30.0 
+token: '2', 2 is pushed on to the stack = 30.0 2.0 
+token: '*', * pops 30 and 2 off of the stack, multiplies them and pushes 60 on to the stack, stack = 60.0 
+result of calculation is 60
+</code></pre>
+
+* __you can make the following assumptions__
+	* all operators (addition, multiplication, subtraction, division, and exponentiation) have two operands (so two elements will be popped off of the stack when you encounter an operator
+	* assume that only integers are in the expression (this actually doesn't really matter that much since you _should_ be using <code>split</code> to break up the input stream)
+* __as you calculate the expression, output the contents of the stack for each token processed__ ... see example output below:
 
 #### Example Output
 
-![pong](../resources/img/pong.gif)
+<pre><code data-trim contenteditable>Please enter a postfix expression:
+> 23 7 + 2 *
+Processing token: '23', stack = 23.0 
+Processing token: '7', stack = 23.0 7.0 
+Processing token: '+', stack = 30.0 
+Processing token: '2', stack = 30.0 2.0 
+Processing token: '*', stack = 60.0 
+</code></pre>
+
+<pre><code data-trim contenteditable>Please enter a postfix expression:
+> 2 3 64 8 / + 7 - ^
+Processing token: '2', stack = 2.0 
+Processing token: '3', stack = 2.0 3.0 
+Processing token: '64', stack = 2.0 3.0 64.0 
+Processing token: '8', stack = 2.0 3.0 64.0 8.0 
+Processing token: '/', stack = 2.0 3.0 8.0 
+Processing token: '+', stack = 2.0 11.0 
+Processing token: '7', stack = 2.0 11.0 7.0 
+Processing token: '-', stack = 2.0 4.0 
+Processing token: '^', stack = 16.0 
+</code></pre>
+
+<pre><code data-trim contenteditable>Please enter a postfix expression:
+> 2 40 3 * 5 3 - 2 ^ / +
+Processing token: '2', stack = 2.0 
+Processing token: '40', stack = 2.0 40.0 
+Processing token: '3', stack = 2.0 40.0 3.0 
+Processing token: '*', stack = 2.0 120.0 
+Processing token: '5', stack = 2.0 120.0 5.0 
+Processing token: '3', stack = 2.0 120.0 5.0 3.0 
+Processing token: '-', stack = 2.0 120.0 2.0 
+Processing token: '2', stack = 2.0 120.0 2.0 2.0 
+Processing token: '^', stack = 2.0 120.0 4.0 
+Processing token: '/', stack = 2.0 30.0 
+Processing token: '+', stack = 32.0 
+</code></pre>
 
 
