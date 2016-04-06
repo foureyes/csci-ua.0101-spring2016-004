@@ -1,10 +1,19 @@
 	<td markdown="block">
+Code / Notes from Class 19:
+
+* covers the following topics
+    * __selection sort with objects!__
+    * getters / setters and private / public
+    * static vs instance
+* [Cat.java](code/Cat.java)
+* [CatTest.java](code/CatTest.java)
+
 Second Midterm
 
 * [Sample Exam Questions](resources/handouts/midterm_2/midterm_2_practice.pdf)
 * [Sample Exam Solutions](resources/handouts/midterm_2/midterm_2_practice_solutions.pdf)
 
-Class Notes from Review
+Additional Review Resources
 
 * [Stacks](activities/stacks.html)
 * [Bubble Sort, Selection Sort, Sorting Objects](activities/sort.html)

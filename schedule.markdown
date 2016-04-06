@@ -280,10 +280,7 @@ TODO:
 <td markdown="block">
 * Review
 </td>
-{% comment %}
 {% include schedule/20.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
