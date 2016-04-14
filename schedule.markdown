@@ -302,10 +302,7 @@ __MIDTERM #2__
 * Inheritance and Polymorphism
 {% comment %} TODO: old class 23 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/22.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
@@ -320,10 +317,7 @@ TODO:
 * REMOVE: string formatting
 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/23.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
