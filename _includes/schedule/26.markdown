@@ -1,5 +1,8 @@
 	<td markdown="block">
+{% comment %}
 * [About Class #26](slides/26/meta.html)
+{% endcomment %}
+
 * [Exception Handling](slides/26/exceptions.html)
 * ArrayList
 * Constructors
@@ -24,6 +27,7 @@
 
 </td>
 	<td markdown="block">
+{% comment %}
 Assignment/Readings
 
 * [Homework #11](assignments/hw11.html)
@@ -37,4 +41,5 @@ Code Samples
 * [PolymorphismDynamicBinding.java](resources/code/class26/PolymorphismDynamicBinding.java)
 * [TryCatchPizza.java](resources/code/class26/TryCatchPizza.java)
 * [TryCatchThrowWithStack.java](resources/code/class26/TryCatchThrowWithStack.java)
+{% endcomment %}
 </td>

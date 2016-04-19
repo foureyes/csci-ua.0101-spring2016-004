@@ -9,7 +9,9 @@
 * __Chapter 11__ - Inheritance and Polymorphism
 </td>
 	<td markdown="block">
-<!--
-* [](assignments/.html)
--->
+
+Due Tuesday, April 26th
+
+* [Homework #09](assignments/hw09.html)
+
 </td>

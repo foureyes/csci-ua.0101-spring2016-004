@@ -328,10 +328,7 @@ TODO:
 * File I/O
 {% comment %} TODO: old class 26 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/24.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
@@ -341,10 +338,7 @@ TODO:
 * File I/O Continued
 {% comment %} TODO: old class 27 {% endcomment %}
 </td>
-{% comment %}
 {% include schedule/25.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
@@ -354,10 +348,7 @@ TODO:
 <td markdown="block">
 * Interfaces and Abstract Classes
 </td>
-{% comment %}
 {% include schedule/26.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
@@ -367,10 +358,7 @@ TODO:
 * Interfaces and Abstract Classes Continued
 * Recursion 
 </td>
-{% comment %}
 {% include schedule/27.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
@@ -379,10 +367,7 @@ TODO:
 <td markdown="block">
 * Review
 </td>
-{% comment %}
 {% include schedule/28.markdown %}
-{% endcomment %}
-<td></td><td></td><td></td>
  </tr>
 
 
