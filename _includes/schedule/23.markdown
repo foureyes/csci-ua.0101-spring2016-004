@@ -10,7 +10,7 @@
 </td>
 	<td markdown="block">
 
-Due Tuesday, April 26th
+Due Wednesday, April 27th (originally 26th, but extended)
 
 * [Homework #09](assignments/hw09.html)
 
