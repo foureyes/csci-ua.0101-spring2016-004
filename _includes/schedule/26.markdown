@@ -3,11 +3,20 @@
 * [About Class #26](slides/26/meta.html)
 {% endcomment %}
 
+Slides
+
 * [Exception Handling](slides/26/exceptions.html)
 * ArrayList
 * Constructors
 * [File I/O](slides/26/fileio.html)
 * _Commandline_ Arguments
+
+Midterm Solutions
+
+* [Midterm solutions v1](resources/handouts/midterm2/midterm_2_v1_ramen_solutions.pdf)
+* [Midterm solutions v2](resources/handouts/midterm2/midterm_2_v2_coffee_solutions.pdf) 
+
+
 {% comment %}
 * [](slides//.html)
 	* sortable
