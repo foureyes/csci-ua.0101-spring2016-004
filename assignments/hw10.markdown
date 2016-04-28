@@ -1,16 +1,14 @@
 ---
 layout: homework
-title: "Assignment #11"
+title: "Assignment #10"
 ---
-# Assignment #11 - Due Saturday, May 9th at 11PM 
-
-### (No Grace Period!)
+# Assignment #10 - Due Thursday, May 5th at 11PM 
 
 ## Links...
 
 * [Readings](#readings)
 * [CampaignContributions](#part2)
-* [Extra Credit (for midterm exams)](#part3)
+* [Extra Credit](#part3)
 
 <a name="readings"></a>
 
@@ -91,7 +89,7 @@ __Instructions__:
 	* (for __extra credit__, you must have a third file, <code>Contribution</code>, detailed in part 3)
 * Read in the file specified in <code>args[0]</code> (the <code>.csv</code> file) using a combination of a <code>File</code> object and a <code>Scanner</code> object
 	* use the data form the file to create <code>Candidate</code> objects and store them in an <code>ArrayList</code>
-	* extra the data from each line (hint: maybe <code>split</code> would be helpful here!) ... determine which column the first, last and contribution amount appears
+	* extract the data from each line (hint: maybe <code>split</code> would be helpful here!) ... determine which column the first, last and contribution amount appears
 	* an example row from the data looks like this: <code>2013,4,214,UN,Oddo,James,R0001349,2000</code>
 	* you can see from the first line of the file, the header, what each field represents (again, you can open the original <code>.csv</code> using Notepad, TextEdit, Excel or OpenOffice)
 	* this means you'll have to find some way of skipping the headers!
@@ -101,7 +99,7 @@ __Instructions__:
 		* <code>.size()</code> - returns the number of elements in the <code>ArrayList</code> (similar to <code>myArray.length</code>)
 		* <code>.get(index)</code> - returns the element at index, <code>index</code> (similar to <code>myArray[index]</code>)
 		* <code>.set(index, element)</code> - sets the element at index, <code>index</code> to <code>element</code> (similar to <code>myArray[index] = element;</code>)
-	* or... if you're interested in trying to implement <code>Comparable</code>, a lengthy way of doing this would be to:
+	* if you're interested in trying to implement <code>Comparable</code>, a lengthy way of doing this would be to:
 		* have your <code>Candidate</code> class implement the <code>Comparable</code> interface
 		* write your <code>compareTo</code> method 
 		* create a regular <code>Array</code> based off of your <code>ArrayList</code><code>Candidate[] sorted = this.candidates.toArray(new Candidate[this.candidates.size()]);</code>
@@ -140,16 +138,13 @@ Robert Waterman, total: $22072.87, average: $53.06
 
 <a name="part3"></a>
 
-## (5 percentage points - extra credit points from 2nd midterm) Part 3 - Extra Credit
+## Part 3 - Extra Credit
 
 
-### Extra Credit
+### Extra Credit - Contribution Class
 
 #### Instructions
 
-* The extra credit counts as a __maximum of 5%__ on your lower midterm exam grade
-	* The __extra credit from midterm #2 will be subtracted from this__
-	* __If you did 10% better on your 2nd midterm, you are not eligible for this extra credit__
 * Add a comment in your assignment feedback in NYU Classes specifying that you've done the extra credit
 * You must create a third class, <code>Contribution</code>
 	* it will contain <code>amount</code>
