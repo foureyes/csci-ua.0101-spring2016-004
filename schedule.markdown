@@ -372,12 +372,26 @@ TODO:
 
 
 <!-- ------------ --><a name="18"></a>
-<tr class="danger"><td></td><td><strong>TBD</strong><br>Tue</td>
+<tr class="danger"><td></td><td>
+
+<strong>May 17</strong><br>Tue</td>
+
+
+<br></td>
 <td markdown="block">
 __FINAL EXAM__
 </td>
-<td></td><td></td>
+<td>
+
+Tue., May, 17, 2016
+<br>
+2:00 PM - 3:50 PM 
+<br>
+CIWW 317
+
+</td><td></td>
 <td markdown="block">
+
 
 {% comment %}
 Review Material
