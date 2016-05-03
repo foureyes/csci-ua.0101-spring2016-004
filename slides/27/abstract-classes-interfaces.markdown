@@ -93,7 +93,7 @@ __In a class hierarchy (that is, classes that inherit from each other), which ar
 <section markdown="block">
 ## Too Abstract
 
-Sometimes, the superclass becomes so abstract that __it does not make sense to make a _new_ instance of it__. Let's take a look at the [solution for homework #10](../../resources/code/hw10-solutions/MyAnimation.java).
+Sometimes, the superclass becomes so abstract that __it does not make sense to make a _new_ instance of it__. Let's take a look at the [solution for homework #9](../../resources/code/homework09-solution/MyAnimation.java).
 
 * everything inherits from the <code>Sprite</code> class
 * but... __do we ever _actually_ create an instance of sprite__?
@@ -228,6 +228,7 @@ __We know some ways of sorting Arrays. What are they?__ &rarr;
 	* {:.fragment} __let's see if it works__
 	* {:.fragment} __what about objects?__
 	* {:.fragment} __meh...not so much__
+
 </section>
 
 <section markdown="block">
@@ -236,7 +237,7 @@ __We know some ways of sorting Arrays. What are they?__ &rarr;
 If you implement the comparable interface, your object can be sorted if it's in an <code>Array</code> using <code>Arrays.sort()</code>.
 
 <pre><code data-trim contenteditable>
-public class MyClass implements Comparable<MyClass> {
+public class MyClass implements Comparable&lt;MyClass&gt; {
 	public int compareTo(MyClass other) {
 		// return negative int if this is less than other	
 		// return zero if this is equal to other
