@@ -371,14 +371,14 @@ TODO:
  </tr>
 
 
-<!-- ------------ --><a name="18"></a>
+<!-- ------------ --><a id="review" name="review"></a>
 <tr class="danger"><td></td><td>
 
 <strong>May 17</strong><br>Tue</td>
 
 
 <br></td>
-<td markdown="block">
+<td id="final" markdown="block">
 __FINAL EXAM__
 </td>
 <td>
@@ -393,17 +393,25 @@ CIWW 317
 <td markdown="block">
 
 
-{% comment %}
 Review Material
+
 * [Practice Questions](resources/handouts/final/final_practice.pdf)
 * [Practice Questions Solutions](resources/handouts/final/final_practice_solutions.pdf)
+* [Abstract Class / Methods Demo](resources/code/final-exam-review/AbstractDemo.java)
+* [Interface, Comparable Demo](resources/code/final-exam-review/InterfaceDemo.java)
+* [Recursion Demo](resources/code/final-exam-review/RecursionDemo.java)
+* [Ternary Operator Demo](resources/code/final-exam-review/Tern.java)
+* [Exceptions](resources/code/final-exam-review/WhatsAnException.java)
+
+{% comment %}
 * [DynamicBindingDemo.java](resources/code/final-exam-review/DynamicBindingDemo.java)
+* (resources/code/final-exam-review/DynamicBindingDemo.java)
+{% endcomment %}
 
 Reference Material Included in Exam
 
 * [Java Reference (via Professor Klukowska)](resources/handouts/final/cs101-final-exam-reference-java.pdf)
 * [ASCII Table, Processing Reference](resources/handouts/final/cs101-final-exam-reference-papplet-ascii.pdf)
-{% endcomment %}
 </td>
 </tr>
 </tbody>
